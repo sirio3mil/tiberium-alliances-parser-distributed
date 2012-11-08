@@ -1,27 +1,40 @@
 require 'rubygems'
 require 'zmq'
+require 'net/http'
+require 'uri'
+require 'json'
 
-context = ZMQ::Context.new 
-worker = context.socket ZMQ::REQ
+context = ZMQ::Context.new
+fe_tasks = context.socket ZMQ::REQ
 # We use a string identity for ease here
-worker.setsockopt ZMQ::IDENTITY, sprintf("%04X-%04X", rand(10000), rand(10000))
-worker.connect 'tcp://localhost:5555'
+fe_tasks.setsockopt ZMQ::IDENTITY, sprintf("%04X-%04X", rand(10000), rand(10000))
+fe_tasks.connect 'tcp://localhost:5555'
 
 total = 1
-worker.send 'ready'
+fe_tasks.send 'ready'
 loop do
-  workload =  worker.recv
+  workload = fe_tasks.recv
+  if workload =='added'
+    p "registered"
+  else
+    #p workload
+    #sleep((rand(10) + 1) / 10.0)
 
-  # Get workload from router, until finished
+    p "Processed: #{total} uploads"
+    total += 1
 
-  p workload
-  p "Processed: #{total} uploads"
-  total += 1
-
-  # Do some random work
-  sleep((rand(10) + 1) / 10.0)
-
-  worker.send 'free'
+    # Do some random work
+    data = JSON.parse workload
+    data[:key]="wohdfo97wg4iurvfdc t7yaigvrufbs"
+    r = Net::HTTP.post_form URI("http://ta-d/savedata"), data
+    if r.body=="ok"
+      p "ok"
+    else
+      p r.code
+      p r.body
+    end
+  end
+  fe_tasks.send 'free'
 end
 
 

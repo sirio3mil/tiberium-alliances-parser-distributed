@@ -26,7 +26,7 @@ loop do
       if msg == "ready"
         be_worker_socket.send_string address, ZMQ::SNDMORE
         be_worker_socket.send_string '', ZMQ::SNDMORE
-        be_worker_socket.send_string ''
+        be_worker_socket.send_string 'added'
 
         workers_number +=1
       end
