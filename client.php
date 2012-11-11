@@ -1,4 +1,5 @@
 <?php
+require_once "zmsg.php";
 
 // Prepare our context and sockets
 $context = new ZMQContext();
