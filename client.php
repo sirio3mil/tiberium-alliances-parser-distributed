@@ -1,10 +1,8 @@
 <?php
+require_once "commands.php";
 require_once "zmsg.php";
 
 
-define(W_READY, "wr");
-define(W_HEARTBEAT, "whb");
-define(W_DONE, "wd");
 class Worker
 {
     private $context;
@@ -20,7 +18,7 @@ class Worker
     private $triesLeft;
     private $tries = 3;
 
-    public function __construct($broker, $verbose = false, $heartbeat = 2500, $reconnect = 2500)
+    public function __construct($broker, $verbose = false, $heartbeat = 2500, $reconnect = 5000)
 
 
     {
@@ -80,7 +78,17 @@ class Worker
                     echo $zmsg->__toString(), PHP_EOL;
                 }
                 $this->triesLeft = $this->tries;
+
                 $zmsg->pop();
+                $command = $zmsg->pop();
+                if ($command == W_HEARTBEAT) {
+
+                } elseif ($command == W_REQUEST) {
+                    return $zmsg;
+                } else {
+                    echo "I: Unsupported command `$command`, reconnect.", PHP_EOL, PHP_EOL;
+                    $this->connect();
+                }
             } elseif (--$this->triesLeft == 0) {
                 if ($this->verbose) {
                     echo "I: disconnected from broker - retrying... ", PHP_EOL;
@@ -102,7 +110,8 @@ class Worker
 $wrk = new Worker("tcp://localhost:5555", true);
 while (1) {
     $msg = $wrk->recv();
-    $wrk->send("qwe");
+
+    $wrk->send(W_RESPONSE);
 }
 
 
