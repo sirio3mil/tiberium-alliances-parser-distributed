@@ -10,14 +10,13 @@ class Worker
     private $poll;
     private $verbose;
 
-// Heartbeat management
-    private $heartbeat_at; // When to send HEARTBEAT
-    private $heartbeat; // Heartbeat delay, msecs
-    private $reconnect;
-    private $triesLeft;
-    private $tries = 3;
+    private $heartbeatAt;
+    private $heartbeatDelay;
+    private $reconnectDelay;
+    private $heartbeatTriesLeft;
+    private $heartbeatMaxFails = 3;
 
-    public function __construct($broker, $verbose = false, $heartbeat = 2500, $reconnect = 5000)
+    public function __construct($broker, $verbose = false, $heartbeatDelay = 2500, $reconnectDelay = 5000)
 
 
     {
@@ -26,8 +25,8 @@ class Worker
 
         $this->broker = $broker;
         $this->verbose = $verbose;
-        $this->heartbeat = $heartbeat;
-        $this->reconnect = $reconnect;
+        $this->heartbeatDelay = $heartbeatDelay;
+        $this->reconnectDelay = $reconnectDelay;
         $this->connect();
     }
 
@@ -46,12 +45,12 @@ class Worker
         if ($this->verbose) {
             printf("I: connecting to broker at %s... %s", $this->broker, PHP_EOL);
         }
-        $this->send(W_READY);
-        $this->triesLeft = $this->tries;
-        $this->heartbeat_at = microtime(true) + ($this->heartbeat / 1000);
+        $this->sendCommand(W_READY);
+        $this->heartbeatTriesLeft = $this->heartbeatMaxFails;
+        $this->heartbeatAt = microtime(true) + ($this->heartbeatDelay / 1000);
     }
 
-    public function send($command, $msg = null)
+    private function sendCommand($command, $msg = null)
     {
         if (!$msg) {
             $msg = new Zmsg();
@@ -60,7 +59,7 @@ class Worker
         $msg->push(W_WORKER);
         $msg->push("");
         if ($this->verbose) {
-            printf("I: sending %s to broker %s", $command, PHP_EOL);
+            printf("I: sending `%s` to broker %s", $command, PHP_EOL);
             echo $msg->__toString(), PHP_EOL;
         }
         $msg->set_socket($this->socket)->send();
@@ -70,7 +69,7 @@ class Worker
     {
         $read = $write = array();
         while (true) {
-            $events = $this->poll->poll($read, $write, $this->heartbeat);
+            $events = $this->poll->poll($read, $write, $this->heartbeatDelay);
             if ($events) {
                 $zmsg = new Zmsg($this->socket);
                 $zmsg->recv();
@@ -78,9 +77,12 @@ class Worker
                     echo "I: received message from broker:", PHP_EOL;
                     echo $zmsg->__toString(), PHP_EOL;
                 }
-                $this->triesLeft = $this->tries;
+                $this->heartbeatTriesLeft = $this->heartbeatMaxFails;
 
                 $zmsg->pop();
+                $header = $zmsg->pop();
+                assert($header == W_WORKER);
+
                 $command = $zmsg->pop();
                 if ($command == W_HEARTBEAT) {
 
@@ -94,19 +96,33 @@ class Worker
                     echo "I: Unsupported command `$command`.", PHP_EOL;
                     echo $zmsg->__toString(), PHP_EOL, PHP_EOL;
                 }
-            } elseif (--$this->triesLeft == 0) {
+                //@todo: change to expire time;
+            } elseif (--$this->heartbeatTriesLeft == 0) {
                 if ($this->verbose) {
                     echo "I: disconnected from broker - retrying... ", PHP_EOL;
-                    usleep($this->reconnect * 1000);
-                    $this->connect();
                 }
+                usleep($this->reconnectDelay * 1000);
+                $this->connect();
             }
 
-            if (microtime(true) > $this->heartbeat_at) {
-                $this->send(W_HEARTBEAT);
-                $this->heartbeat_at = microtime(true) + ($this->heartbeat / 1000);
-            }
+            $this->sendHeartbeat();
         }
+    }
+
+    private function sendHeartbeat()
+    {
+        if (microtime(true) > $this->heartbeatAt) {
+            $this->sendCommand(W_HEARTBEAT);
+            $this->heartbeatAt = microtime(true) + ($this->heartbeatDelay / 1000);
+        }
+    }
+
+    public function send($data)
+    {
+        $zmsg = new Zmsg();
+        $zmsg->body_set($data);
+        //@todo: wrap address;
+        $this->sendCommand(W_RESPONSE, $zmsg);
     }
 
 }
