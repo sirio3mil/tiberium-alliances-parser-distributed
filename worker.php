@@ -87,9 +87,7 @@ class Worker
                 if ($command == W_HEARTBEAT) {
 
                 } elseif ($command == W_REQUEST) {
-                    $addres = $zmsg->unwrap();
-                    echo "I: Address $addres", PHP_EOL;
-                    return $zmsg;
+                    return $zmsg->pop();
                 } elseif ($command == W_DISCONNECT) {
                     $this->connect();
                 } else {

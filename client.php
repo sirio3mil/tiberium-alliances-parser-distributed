@@ -5,8 +5,8 @@ $wrk = new Worker("tcp://localhost:5555", true);
 
 while (1) {
     $msg = $wrk->recv();
-    //do hard work;
-    $wrk->send("done!111");
+    sleep(5);
+    $wrk->send("done `$msg`");
 }
 
 

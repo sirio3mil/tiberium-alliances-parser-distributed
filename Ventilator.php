@@ -28,7 +28,7 @@ class Ventilator
         $this->verbose = $verbose;
         $this->heartbeatDelay = $heartbeatDelay;
         $this->workers = array();
-        $this->workersFree = new SplQueue();
+        $this->workersFree = array();
 
     }
 
@@ -73,7 +73,7 @@ class Ventilator
     {
         if (microtime(true) > $this->heartbeatAt) {
             if ($this->verbose) {
-                echo "I: send heartbeats to {$this->workersFree->count()} workers", PHP_EOL;
+                echo "I: send heartbeats to " . sizeof($this->workersFree) . " workers", PHP_EOL;
             }
             foreach ($this->workersFree as $worker) {
                 $this->workerSend($worker, W_HEARTBEAT);
@@ -85,32 +85,37 @@ class Ventilator
     private function process($sender, $zmsg)
     {
         $command = $zmsg->pop();
+        $hasWorker = $this->hasWorker($sender);
+
         switch ($command) {
             case W_READY:
-                if (!$this->hasWorker($sender)) {
+                if (!$hasWorker) {
                     $this->addWorker($sender);
                 } else {
-                    echo "disconnect!", PHP_EOL;
+                    echo "E: Ready from ready worker `$sender` - disconnect ", PHP_EOL;
+                    $this->deleteWorker($this->workers[$sender], true);
                 }
                 break;
             case W_HEARTBEAT:
-                if ($this->hasWorker($sender)) {
+                if ($hasWorker) {
                     $this->live($this->workers[$sender]);
                 } else {
-                    echo "disconnect!", PHP_EOL;
+                    echo "E: Heartbeat from not ready worker `$sender` - disconnect ", PHP_EOL;
+                    $this->send($sender, W_DISCONNECT);
                 }
                 break;
             case W_RESPONSE:
-                if ($this->hasWorker($sender)) {
+                if ($hasWorker) {
+                    $this->taskResult($zmsg->pop());
                     $this->free($this->workers[$sender]);
                 } else {
-                    echo "disconnect!", PHP_EOL;
+                    echo "E: Response from not ready worker `$sender` - disconnect ", PHP_EOL;
+                    $this->send($sender, W_DISCONNECT);
                 }
                 break;
             default:
-                echo "I: Unsupported command `$command`.", PHP_EOL;
+                echo "E: Unsupported command `$command`.", PHP_EOL;
                 echo $zmsg->__toString(), PHP_EOL, PHP_EOL;
-
         }
     }
 
@@ -127,8 +132,9 @@ class Ventilator
 
     private function free($worker)
     {
-        $this->workersFree->enqueue($worker);
+        $this->workersFree[] = $worker;
         $this->live($worker);
+        $this->generateTasks();
     }
 
     private function live(VWorker $worker)
@@ -141,12 +147,22 @@ class Ventilator
         return isset($this->workers[$address]);
     }
 
-    private function workerSend(VWorker $worker, $command, $zmsg = null)
+    private function workerSend(VWorker $worker, $command, $data = null)
+    {
+        $zmsg = null;
+        if ($data) {
+            $zmsg = new Zmsg();
+            $zmsg->body_set($data);
+        }
+        $this->send($worker->address, $command, $zmsg);
+    }
+
+    private function send($address, $command, $zmsg = null)
     {
         $zmsg = $zmsg ? $zmsg : new Zmsg();
         $zmsg->push($command);
         $zmsg->push(W_WORKER);
-        $zmsg->wrap($worker->address, "");
+        $zmsg->wrap($address, "");
         if ($this->verbose) {
             printf("I: sending `%s` to worker %s", $command, PHP_EOL);
             echo $zmsg->__toString(), PHP_EOL, PHP_EOL;
@@ -158,12 +174,10 @@ class Ventilator
     {
         foreach ($this->workersFree as $worker) {
             if ($worker->expiry < microtime(1)) {
+                echo "I: expired worker `$worker->address`", PHP_EOL;
                 $this->deleteWorker($worker);
-            } else {
-                break;
             }
         }
-
     }
 
     private function deleteWorker(VWorker $worker, $disconnect = false)
@@ -175,12 +189,28 @@ class Ventilator
             $this->workerSend($worker, W_DISCONNECT);
         }
         unset($this->workers[$worker->address]);
-        for ($i = 0; $i < $this->workersFree->count(); $i++) {
-            if ($worker == $this->workersFree[$i]) {
-                $this->workersFree->offsetUnset($i);
-                break;
-            }
+        $index = array_search($worker, $this->workersFree);
+        if ($index !== false) {
+            unset($this->workersFree[$index]);
         }
+    }
+
+    private function generateTasks()
+    {
+        foreach ($this->workersFree as $k => $worker) {
+            $this->workerSend($worker, W_REQUEST, $this->getNextTask());
+            unset($this->workersFree[$k]);
+        }
+    }
+
+    private function getNextTask()
+    {
+        return mt_rand(1, 1000);
+    }
+
+    private function taskResult($data)
+    {
+        print_r("resolved $data" . PHP_EOL);
     }
 }
 
@@ -196,7 +226,6 @@ class VWorker
 
     public function aliveFor($time)
     {
-        echo "alivefor + $time",PHP_EOL;
         $this->expiry = microtime(1) + $time / 1000;
     }
 }
