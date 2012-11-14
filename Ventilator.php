@@ -17,6 +17,8 @@ class Ventilator
     //workers
     private $workers;
     private $workersFree;
+    private $generator;
+    private $responder;
 
     public function __construct($verbose = false, $heartbeatDelay = 2500)
     {
@@ -30,6 +32,16 @@ class Ventilator
         $this->workers = array();
         $this->workersFree = array();
 
+    }
+
+    public function setGenerator($generator)
+    {
+        $this->generator = $generator;
+    }
+
+    public function setResponder($responder)
+    {
+        $this->responder = $responder;
     }
 
     public function bind($endpoint)
@@ -106,8 +118,8 @@ class Ventilator
                 break;
             case W_RESPONSE:
                 if ($hasWorker) {
-                    $this->taskResult($zmsg->pop());
                     $this->free($this->workers[$sender]);
+                    call_user_func($this->responder, $zmsg->pop());
                 } else {
                     echo "E: Response from not ready worker `$sender` - disconnect ", PHP_EOL;
                     $this->send($sender, W_DISCONNECT);
@@ -198,19 +210,9 @@ class Ventilator
     private function generateTasks()
     {
         foreach ($this->workersFree as $k => $worker) {
-            $this->workerSend($worker, W_REQUEST, $this->getNextTask());
+            $this->workerSend($worker, W_REQUEST, call_user_func($this->generator));
             unset($this->workersFree[$k]);
         }
-    }
-
-    private function getNextTask()
-    {
-        return mt_rand(1, 1000);
-    }
-
-    private function taskResult($data)
-    {
-        print_r("resolved $data" . PHP_EOL);
     }
 }
 
