@@ -15,6 +15,7 @@ class Worker
     private $reconnectDelay;
     private $heartbeatTriesLeft;
     private $heartbeatMaxFails = 3;
+    private $executer;
 
     public function __construct($broker, $verbose = false, $heartbeatDelay = 2500, $reconnectDelay = 5000)
 
@@ -65,7 +66,7 @@ class Worker
         $msg->set_socket($this->socket)->send();
     }
 
-    public function recv()
+    public function work()
     {
         $read = $write = array();
         while (true) {
@@ -87,14 +88,15 @@ class Worker
                 if ($command == W_HEARTBEAT) {
 
                 } elseif ($command == W_REQUEST) {
-                    return $zmsg->pop();
+                    //@todo: get address
+                    $result = call_user_func($this->executer, $zmsg->pop());
+                    $this->send($result);
                 } elseif ($command == W_DISCONNECT) {
                     $this->connect();
                 } else {
                     echo "I: Unsupported command `$command`.", PHP_EOL;
                     echo $zmsg->__toString(), PHP_EOL, PHP_EOL;
                 }
-                //@todo: change to expire time;
             } elseif (--$this->heartbeatTriesLeft == 0) {
                 if ($this->verbose) {
                     echo "I: disconnected from broker - retrying... ", PHP_EOL;
@@ -121,6 +123,11 @@ class Worker
         $zmsg->body_set($data);
         //@todo: wrap address;
         $this->sendCommand(W_RESPONSE, $zmsg);
+    }
+
+    public function setExecuter($executer)
+    {
+        $this->executer = $executer;
     }
 
 }

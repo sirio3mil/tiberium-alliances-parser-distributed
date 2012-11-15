@@ -3,10 +3,11 @@ require_once "Worker.php";
 
 $wrk = new Worker("tcp://localhost:5555", true);
 
-while (1) {
-    $msg = $wrk->recv();
+$wrk->setExecuter(function ($data) {
     sleep(5);
-    $wrk->send("done `$msg`");
-}
+    return "done $data";
+});
+
+$wrk->work();
 
 
