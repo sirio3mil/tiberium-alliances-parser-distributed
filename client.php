@@ -1,5 +1,5 @@
 <?php
-require_once "Worker.php";
+require_once "lib/0MQ/0MQ/Worker.php";
 
 $wrk = new Worker("tcp://localhost:5555", true);
 

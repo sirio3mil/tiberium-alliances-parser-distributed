@@ -1,5 +1,5 @@
 <?php
-require_once "Ventilator.php";
+require_once "lib/0MQ/0MQ/Ventilator.php";
 
 $server = new Ventilator(true);
 $server->bind("tcp://*:5555");
