@@ -43,14 +43,15 @@ if ($api->openSession()) {
             "requests" => "UA\fWC:A\fCTIME:$time\fCHAT:\fWORLD:$request\fGIFT:\fACS:1\fASS:1\fCAT:1\f"
         ), true);
 
-
         if ($resp) {
             $data = json_decode($resp);
             if ($data) {
                 $squares = array();
                 print_r("Row: $y");
+                $hasSquares = false;
                 foreach ($data as $part) {
                     if (isset($part->d->__type) && $part->d->__type == "WORLD") {
+                        $hasSquares = true;
 
                         unset($part->d->u);
                         unset($part->d->t);
@@ -59,8 +60,7 @@ if ($api->openSession()) {
                         $squaresSize = sizeof($part->d->s);
                         print_r(" squares: " . $squaresSize . "\r\n");
                         if ($squaresSize != $server["x"]) {
-                            $api->close();
-                            die;
+                            break 2;
                         } else {
                             $successParts++;
                         }
@@ -69,19 +69,22 @@ if ($api->openSession()) {
                         }
                     }
                 }
+                if (!$hasSquares) {
+                    break;
+                }
             }
         }
     }
     print_r("\r\nSucces parts:$successParts, time: " . Timer::get("get") . "\r\n\r\n");
 
-    Timer::set("decode");
-    foreach ($squares as $squareData) {
-        $world->addSquare(Square::decode($squareData));
-    }
-    print_r("Decoded, time: " . Timer::get("decode") . " \r\n\r\n");
-
-
     if ($successParts == $server["y"]) {
+        Timer::set("decode");
+        foreach ($squares as $squareData) {
+            $world->addSquare(Square::decode($squareData));
+        }
+        print_r("Decoded, time: " . Timer::get("decode") . " \r\n\r\n");
+
+
         Timer::set("upload");
         print_r("Uploading: " . $world->toServer() . ", time: " . Timer::get("upload") . "\r\n\r\n");
     }
