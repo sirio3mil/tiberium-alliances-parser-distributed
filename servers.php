@@ -1815,7 +1815,7 @@
     'Url' => 'http://prodgame04.alliances.commandandconquer.com/140',
     'x' => 32,
     'y' => 32,
-    'u' => 'empty',
+    'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
   141 => 
@@ -1833,7 +1833,7 @@
     'Url' => 'http://prodgame04.alliances.commandandconquer.com/141',
     'x' => 32,
     'y' => 32,
-    'u' => 'empty',
+    'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
   142 => 
@@ -1851,7 +1851,7 @@
     'Url' => 'http://prodgame04.alliances.commandandconquer.com/142',
     'x' => 32,
     'y' => 32,
-    'u' => 'empty',
+    'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
   143 => 
@@ -1869,7 +1869,7 @@
     'Url' => 'http://prodgame14.alliances.commandandconquer.com/143',
     'x' => 32,
     'y' => 32,
-    'u' => 'empty',
+    'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
   144 => 
@@ -1887,7 +1887,7 @@
     'Url' => 'http://prodgame14.alliances.commandandconquer.com/144',
     'x' => 32,
     'y' => 32,
-    'u' => 'empty',
+    'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
 );

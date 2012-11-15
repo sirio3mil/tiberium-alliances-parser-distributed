@@ -15,8 +15,7 @@ class CCApi
     {
 
         $this->url = $url;
-        $this->curler = Curler::create()
-            ->setCookieFile(dirname(__FILE__) . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "cookies_auth.txt");
+        $this->curler = Curler::create();
         $this->worldSession = $worldSession;
     }
 

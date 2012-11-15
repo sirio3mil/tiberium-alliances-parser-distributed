@@ -2,7 +2,7 @@
 
 function saveServers($servers)
 {
-    $dir = dirname(__FILE__) . DIRECTORY_SEPARATOR;
+    $dir = dirname(__FILE__) . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR;
     file_put_contents($dir . "servers.php", "<?php return " . var_export($servers, 1) . ";");
 
     function sortName($a, $b)

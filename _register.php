@@ -22,6 +22,7 @@ if (is_numeric($k)) {
             $api = new CCApi($servers[$k]["Url"], $ses);
             if ($api->openSession()) {
                 $api->register("limitium");
+                $servers[$k]["u"]="limitium@gmail.com";
             }
         } else {
             print_r("Registered already\r\n");
