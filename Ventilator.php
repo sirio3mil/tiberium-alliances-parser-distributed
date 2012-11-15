@@ -209,6 +209,7 @@ class Ventilator
 
     private function generateTasks()
     {
+        $this->purgeWorkers();
         foreach ($this->workersFree as $k => $worker) {
             $this->workerSend($worker, W_REQUEST, call_user_func($this->generator));
             unset($this->workersFree[$k]);
