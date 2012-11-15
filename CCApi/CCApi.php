@@ -33,7 +33,7 @@ class CCApi
             "Accept-Encoding: gzip, deflate",
             "Content-Type: application/json; charset=UTF-8",
             "X-Qooxdoo-Response-Type: application/json",
-//            "Referer: {$this->url}/index.aspx",
+            "Referer: {$this->url}/index.aspx",
             "Pragma: no-cache",
             "Cache-Control: no-cache"
         ))
@@ -115,10 +115,8 @@ class CCApi
 
     public function getServers()
     {
-        $data = $this->getData('GetOriginAccountInfo', array(), 1, "Farm");
-        print_r($data);
-        die;
-        return $data;
+        $this->setSession($this->worldSession);
+        return $this->getData('GetOriginAccountInfo', array(), false, "Farm");
     }
 
     public function openSession()

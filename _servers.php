@@ -16,6 +16,7 @@ $ses = $authorizator->getSession();
 $api = new CCApi("https://gamecdnorigin.alliances.commandandconquer.com", $ses);
 
 checkNewServers($api, $servers);
+saveServers($servers);
 
 function checkNewServers(CCApi $api, &$servers)
 {
