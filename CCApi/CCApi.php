@@ -11,11 +11,12 @@ class CCApi
 
     private $pollRequests = 0;
 
-    public function __construct($server, $worldSession)
+    public function __construct($url, $worldSession)
     {
-        print_r("Api on: {$server['Name']}\r\n");
-        $this->url = $server["Url"];
-        $this->curler = Curler::create();
+
+        $this->url = $url;
+        $this->curler = Curler::create()
+            ->setCookieFile(dirname(__FILE__) . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "cookies_auth.txt");
         $this->worldSession = $worldSession;
     }
 
@@ -32,7 +33,7 @@ class CCApi
             "Accept-Encoding: gzip, deflate",
             "Content-Type: application/json; charset=UTF-8",
             "X-Qooxdoo-Response-Type: application/json",
-            "Referer: {$this->url}/index.aspx",
+//            "Referer: {$this->url}/index.aspx",
             "Pragma: no-cache",
             "Cache-Control: no-cache"
         ))
@@ -114,8 +115,10 @@ class CCApi
 
     public function getServers()
     {
-        $this->url = "https://gamecdnorigin.alliances.commandandconquer.com";
-        return $this->getData('GetOriginAccountInfo', array(), false, "Farm");
+        $data = $this->getData('GetOriginAccountInfo', array(), 1, "Farm");
+        print_r($data);
+        die;
+        return $data;
     }
 
     public function openSession()
@@ -141,7 +144,7 @@ class CCApi
 
     public static function getTime()
     {
-        return round(microtime(1) * 1000)*2;
+        return round(microtime(1) * 1000) * 2;
     }
 
     public function close()

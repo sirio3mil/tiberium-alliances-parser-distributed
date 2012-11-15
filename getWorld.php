@@ -21,7 +21,7 @@ Timer::set("get");
 $servers = require dirname(__FILE__) . DIRECTORY_SEPARATOR . "servers.php";
 $server = $servers[$argv[1]];
 
-$api = new CCApi($server, $ses);
+$api = new CCApi($server["Url"], $ses);
 
 if ($api->openSession()) {
     $world = new World($server["Id"]);

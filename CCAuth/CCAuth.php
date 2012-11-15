@@ -15,7 +15,7 @@ class CCAuth
         $this->password = $password;
         $this->verbose = $verbose;
         $this->curler = Curler::create()
-            ->setCookieFile("." . DIRECTORY_SEPARATOR . "cookies" . DIRECTORY_SEPARATOR . "cookies_auth.txt");
+            ->setCookieFile(dirname(__FILE__) . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "cookies_auth.txt");
 
     }
 
