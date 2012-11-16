@@ -1,6 +1,5 @@
 <?php
 error_reporting(E_ALL);
-date_default_timezone_set("UTC");
 
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Curler.php";
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Timer.php";
