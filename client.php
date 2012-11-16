@@ -11,24 +11,22 @@ require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCDecoder" . DIRECTORY_S
 
 require_once "lib/0MQ/0MQ/Worker.php";
 
-$wrk = new Worker("tcp://localhost:5555", true);
+$wrk = new Worker("tcp://localhost:5555", true, 5000, 10000);
 
 $wrk->setExecuter(function ($data)
 {
 
     Timer::set("start");
 
-    $authorizator = new CCAuth("limitium@gmail.com", "qweqwe123");
-    $ses = $authorizator->getSession();
-
-    print_r("Time: " . Timer::get("start") . "\r\n\r\n");
-
     Timer::set("get");
 
     $server = (array)json_decode($data);
 
-    $api = new CCApi($server["Url"], $ses);
-
+    $api = new CCApi($server["Url"], $server["session"]);
+    $result = array(
+        "Id" => $server["Id"],
+        "status" => 2
+    );
     if ($api->openSession()) {
         $world = new World($server["Id"]);
 
@@ -94,12 +92,15 @@ $wrk->setExecuter(function ($data)
 
             Timer::set("upload");
             print_r("Uploading: " . $world->toServer() . ", time: " . Timer::get("upload") . "\r\n\r\n");
+            $result["status"] = 1;
         }
         print_r("Total time: " . Timer::get("start"));
 
+    } else {
+        $result["status"] = 3;
     }
     $api->close();
-    return "Done {$server["Name"]}";
+    return json_encode($result);
 });
 
 $wrk->work();
