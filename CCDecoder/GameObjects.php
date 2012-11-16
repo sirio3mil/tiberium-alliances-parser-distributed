@@ -435,7 +435,7 @@ class World
             'players' => array_values($this->players),
             'alliances' => array_values($this->alliances),
             'pois' => array_values($this->pois),
-            'timestamp' => time(),
+            'timestamp' => "_%timestamp%_",
         );
         return $data;
     }
