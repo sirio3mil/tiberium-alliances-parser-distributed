@@ -11,7 +11,7 @@ require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCDecoder" . DIRECTORY_S
 
 require_once "lib/0MQ/0MQ/Worker.php";
 
-$wrk = new Worker("tcp://localhost:5555", true, 5000, 10000);
+$wrk = new Worker("tcp://192.168.123.1:5555", true, 5000, 10000);
 
 $wrk->setExecuter(function ($data)
 {
