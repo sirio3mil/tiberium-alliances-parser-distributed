@@ -35,14 +35,16 @@ class Generator
             );
         }
         $session = $this->sessions[$username]["auth"]->getSession($this->sessions[$username]["forceReload"]);
-        $this->sessions[$username]["forceReload"] = false;
+        if ($session) {
+            $this->sessions[$username]["forceReload"] = false;
+        }
         return $session;
     }
 
     public function reloadSession($serverId)
     {
         $username = $this->servers[$serverId]["u"];
-        if (!isset($this->sessions[$username])) {
+        if (isset($this->sessions[$username])) {
             $this->sessions[$username]["forceReload"] = true;
         }
     }

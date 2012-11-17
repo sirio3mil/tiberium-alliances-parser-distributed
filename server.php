@@ -41,7 +41,7 @@ $server->setResponder(function ($data) use($generator)
             break;
         case 3:
             $generator->reloadSession($data["Id"]);
-            print_r("Session fails" . PHP_EOL);
+            print_r("Session fails for {$data["Id"]}" . PHP_EOL);
             break;
         default:
             print_r("Invalid status {$data["status"]}" . PHP_EOL);
