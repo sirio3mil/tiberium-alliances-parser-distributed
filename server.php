@@ -3,51 +3,20 @@ error_reporting(E_ALL);
 
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Curler.php";
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Timer.php";
-
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCAuth" . DIRECTORY_SEPARATOR . "CCAuth.php";
-
-class Generator
-{
-    public static $servers;
-    public static $keys = array();
-    public static $authorizator;
-    public static $reloadSession = true;
-
-    public static function nextServer()
-    {
-        if (sizeof(self::$keys) == 0) {
-            self::$keys = array_keys(self::$servers);
-        }
-        while (!is_numeric($id = array_shift(self::$keys))) {
-        }
-        return self::$servers[$id];
-
-    }
-
-    public static function getSession()
-    {
-        $session = self::$authorizator->getSession(self::$reloadSession);
-        self::$reloadSession = false;
-        return $session;
-    }
-}
-
-Generator::$authorizator = new CCAuth("limitium@gmail.com", "qweqwe123");
-Generator::$servers = require dirname(__FILE__) . DIRECTORY_SEPARATOR . "servers.php";
-
-
 require_once "lib/0MQ/0MQ/Ventilator.php";
+require_once "Generator.php";
 
 $server = new Ventilator(true, 5000);
 $server->bind("tcp://*:5555");
+$generator = new Generator();
 
-$server->setGenerator(function ()
+$server->setGenerator(function () use($generator)
 {
-    $server = Generator::nextServer();
     Timer::set("session");
-    $server["session"] = Generator::getSession();
+    $server = $generator->nextServer();
     print_r("Session get time: " . Timer::get("session") . PHP_EOL);
-    if (!$server["session"]) {
+    if (!$server) {
         return false;
     }
     unset($server["AcceptNewPlayer"]);
@@ -60,7 +29,7 @@ $server->setGenerator(function ()
     return json_encode($server);
 });
 
-$server->setResponder(function ($data)
+$server->setResponder(function ($data) use($generator)
 {
     $data = (array)json_decode($data);
     switch ($data["status"]) {
@@ -71,7 +40,7 @@ $server->setResponder(function ($data)
             print_r("Fail :{$data["Id"]}" . PHP_EOL);
             break;
         case 3:
-            Generator::$reloadSession = true;
+            $generator->reloadSession($data["Id"]);
             print_r("Session fails" . PHP_EOL);
             break;
         default:
