@@ -29,7 +29,8 @@ Everyone welcome!
 ";
 
     $post = "
- Added World 51, World 52, World 53, Мир 8, Welt 19. New faster parser all worlds in 5 mins! Looking for developing help [url]http://forum.alliances.commandandconquer.com/showthread.php?tid=13431&pid=93842#pid93842[/url]";
+ Added World 54, Welt 20, Мир 9.
+ ";
 
     $time = CCApi::getTime();
     $data = $api->poll(array(
