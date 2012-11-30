@@ -52,7 +52,7 @@ $wrk->setExecuter(function ($data)
                 $data = json_decode($resp);
                 if ($data) {
                     $squares = array();
-                    print_r("Row: $y");
+//                    print_r("Row: $y");
                     $hasSquares = false;
                     foreach ($data as $part) {
                         if (isset($part->d->__type) && $part->d->__type == "WORLD") {
@@ -63,7 +63,7 @@ $wrk->setExecuter(function ($data)
                             unset($part->d->v);
 
                             $squaresSize = sizeof($part->d->s);
-                            print_r(" squares: " . $squaresSize . "\r\n");
+//                            print_r(" squares: " . $squaresSize . "\r\n");
                             if ($squaresSize != $server["x"]) {
                                 break 2;
                             } else {
@@ -96,7 +96,7 @@ $wrk->setExecuter(function ($data)
             $result["status"] = 1;
             $result["data"] = $zip;
         }
-        print_r("Total time: " . Timer::get("start"));
+        print_r("Total time: " . Timer::get("start"). "\r\n\r\n");
 
     } else {
         $result["status"] = 3;
