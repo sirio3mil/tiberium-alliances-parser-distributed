@@ -452,8 +452,8 @@ class World
                     'data' => $zip)
             )
         )
-            ->withHeaders(false)
-            ->post();
+            ->withHeaders(false);
+        $curler->post();
         $curler->close();
         return $zip;
     }
