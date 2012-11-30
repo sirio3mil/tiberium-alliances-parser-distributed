@@ -36,9 +36,9 @@ $server->setGenerator(function () use($generator)
 
 $server->setResponder(function ($data) use($generator, $publisher)
 {
-    $id = substr($data,0,3);
-    $status = substr($data,3,2);
-    $data = substr($data,5);
+    $id = intval(substr($data, 0, 3));
+    $status = intval(substr($data, 3, 2));
+    $data = substr($data, 5);
     switch ($status) {
         case 1:
             print_r("Done :{$id}" . PHP_EOL);
