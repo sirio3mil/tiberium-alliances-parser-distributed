@@ -20,7 +20,7 @@ $server->setGenerator(function () use($generator)
 {
     Timer::set("session");
     $server = $generator->nextServer();
-    print_r("Session get time: " . Timer::get("session") . PHP_EOL);
+//    print_r("Session get time: " . Timer::get("session") . PHP_EOL);
     if (!$server) {
         return false;
     }
@@ -31,6 +31,7 @@ $server->setGenerator(function () use($generator)
     unset($server["Timezone"]);
     unset($server["u"]);
     unset($server["p"]);
+    print_r("Start :{$server["Id"]}" . PHP_EOL);
     return json_encode($server);
 });
 
@@ -42,7 +43,9 @@ $server->setResponder(function ($data) use($generator, $publisher)
     switch ($status) {
         case 1:
             print_r("Done :{$id}" . PHP_EOL);
+            Timer::set("publish");
             $publisher->send($data);
+            print_r("Publish : " . Timer::get("publish") . PHP_EOL);
             break;
         case 2:
             print_r("Fail :{$id}" . PHP_EOL);
