@@ -442,18 +442,19 @@ class World
 
     public function toServer()
     {
+        $zip = gzcompress(json_encode($this->prepareData()));
         $curler = Curler::create()
             ->setUrl("http://data.tiberium-alliances.com/savedata")
             ->setPostData(Curler::encodePost(
                 array(
                     'key' => "wohdfo97wg4iurvfdc t7yaigvrufbs",
                     'world' => $this->server,
-                    'data' => gzcompress("ccmapData = " . json_encode($this->prepareData()) . ";"))
+                    'data' => $zip)
             )
         )
-            ->withHeaders(false);
-        $resp = $curler->post();
+            ->withHeaders(false)
+            ->post();
         $curler->close();
-        return $resp;
+        return $zip;
     }
 }

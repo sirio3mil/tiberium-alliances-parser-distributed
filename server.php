@@ -7,6 +7,11 @@ require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCAuth" . DIRECTORY_SEPA
 require_once "lib/0MQ/0MQ/Ventilator.php";
 require_once "Generator.php";
 
+$context = new ZMQContext();
+$publisher = new ZMQSocket($context, ZMQ::SOCKET_PUB);
+$bind = "tcp://*:5556";
+$publisher->bind($bind);
+
 $server = new Ventilator(true, 5000);
 $server->bind("tcp://*:5555");
 $generator = new Generator();
@@ -29,12 +34,13 @@ $server->setGenerator(function () use($generator)
     return json_encode($server);
 });
 
-$server->setResponder(function ($data) use($generator)
+$server->setResponder(function ($data) use($generator, $publisher)
 {
     $data = (array)json_decode($data);
     switch ($data["status"]) {
         case 1:
             print_r("Done :{$data["Id"]}" . PHP_EOL);
+            $publisher->send($data["data"]);
             break;
         case 2:
             print_r("Fail :{$data["Id"]}" . PHP_EOL);

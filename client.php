@@ -90,8 +90,10 @@ $wrk->setExecuter(function ($data)
 
 
             Timer::set("upload");
-            print_r("Uploading: " . $world->toServer() . ", time: " . Timer::get("upload") . "\r\n\r\n");
+            $zip = $world->toServer();
+            print_r("Uploading: " . Timer::get("upload") . "\r\n\r\n");
             $result["status"] = 1;
+            $result["data"] = $zip;
         }
         print_r("Total time: " . Timer::get("start"));
 
