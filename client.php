@@ -10,7 +10,7 @@ require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCDecoder" . DIRECTORY_S
 
 require_once "lib/0MQ/0MQ/Worker.php";
 
-$wrk = new Worker("tcp://192.168.123.1:5555", true, 5000, 10000);
+$wrk = new Worker("tcp://192.168.123.1:5555", false, 5000, 10000);
 
 $wrk->setExecuter(function ($data)
 {
@@ -24,7 +24,8 @@ $wrk->setExecuter(function ($data)
     $api = new CCApi($server["Url"], $server["session"]);
     $result = array(
         "Id" => $server["Id"],
-        "status" => 2
+        "status" => 2,
+        "data" => null,
     );
     if ($api->openSession()) {
         $world = new World($server["Id"]);
@@ -101,7 +102,7 @@ $wrk->setExecuter(function ($data)
         $result["status"] = 3;
     }
     $api->close();
-    return json_encode($result);
+    return sprintf("%03s", $result["Id"]) . sprintf("%02s", $result["status"]) . $result["data"];
 });
 
 $wrk->work();

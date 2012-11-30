@@ -12,7 +12,7 @@ $publisher = new ZMQSocket($context, ZMQ::SOCKET_PUB);
 $bind = "tcp://*:5556";
 $publisher->bind($bind);
 
-$server = new Ventilator(true, 5000);
+$server = new Ventilator(false, 5000);
 $server->bind("tcp://*:5555");
 $generator = new Generator();
 
@@ -36,21 +36,23 @@ $server->setGenerator(function () use($generator)
 
 $server->setResponder(function ($data) use($generator, $publisher)
 {
-    $data = (array)json_decode($data);
-    switch ($data["status"]) {
+    $id = substr($data,0,3);
+    $status = substr($data,3,2);
+    $data = substr($data,5);
+    switch ($status) {
         case 1:
-            print_r("Done :{$data["Id"]}" . PHP_EOL);
-            $publisher->send($data["data"]);
+            print_r("Done :{$id}" . PHP_EOL);
+            $publisher->send($data);
             break;
         case 2:
-            print_r("Fail :{$data["Id"]}" . PHP_EOL);
+            print_r("Fail :{$id}" . PHP_EOL);
             break;
         case 3:
-            $generator->reloadSession($data["Id"]);
-            print_r("Session fails for {$data["Id"]}" . PHP_EOL);
+            $generator->reloadSession($id);
+            print_r("Session fails for {$id}" . PHP_EOL);
             break;
         default:
-            print_r("Invalid status {$data["status"]}" . PHP_EOL);
+            print_r("Invalid status {$status}" . PHP_EOL);
     }
 });
 
