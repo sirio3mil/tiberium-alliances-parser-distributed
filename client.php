@@ -86,7 +86,7 @@ $wrk->setExecuter(function ($data)
             foreach ($squares as $squareData) {
                 $world->addSquare(Square::decode($squareData));
             }
-            $zip = gzencode(json_encode($this->prepareData()));
+            $zip = gzencode(json_encode($world->prepareData()));
             print_r("Decoded, time: " . Timer::get("decode") . " \r\n\r\n");
             $result["status"] = 1;
             $result["data"] = $zip;

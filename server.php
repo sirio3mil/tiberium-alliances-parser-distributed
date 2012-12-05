@@ -35,7 +35,7 @@ $ventilator->setGenerator(function () use($generator)
     return json_encode($server);
 });
 
-$ventilator->setResponder(function ($data) use($generator, $publisher, $sequence)
+$ventilator->setResponder(function ($data) use($generator, $publisher)
 {
     $id = intval(substr($data, 0, 3));
     $status = intval(substr($data, 3, 2));
@@ -43,9 +43,7 @@ $ventilator->setResponder(function ($data) use($generator, $publisher, $sequence
     switch ($status) {
         case 1:
             print_r("Done :{$id}" . PHP_EOL);
-            Timer::set("publish");
             $publisher->send(sprintf("%03s", $id) . $data);
-            print_r("Publish : " . Timer::get("publish") . PHP_EOL);
             break;
         case 2:
             print_r("Fail :{$id}" . PHP_EOL);

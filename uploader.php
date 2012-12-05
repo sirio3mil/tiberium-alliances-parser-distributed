@@ -9,7 +9,7 @@ $subscriber = new Subscriber("tcp://192.168.123.1:5556", 5000);
 
 $subscriber->setListner(function($data)
 {
-    $id = substr($data, 0, 3);
+    $id = intval(substr($data, 0, 3));
     $zip = substr($data, 3);
     Timer::set("upload");
     $curler = Curler::create()
@@ -22,14 +22,14 @@ $subscriber->setListner(function($data)
         )
     )
         ->withHeaders(false);
-    $curler->post();
+    $resp = $curler->post();
     $curler->close();
-    print_r("Uploading $id: " . Timer::get("upload") . "\r\n\r\n");
+    print_r("Uploading $id... $resp: " . Timer::get("upload") . "\r\n\r\n");
 });
 
 $subscriber->setMisser(function($delay)
 {
-    print_r("Long work :$delay" . PHP_EOL);
+    print_r("Long delay :$delay" . PHP_EOL);
 });
 
 $subscriber->listen();
