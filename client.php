@@ -82,19 +82,16 @@ $wrk->setExecuter(function ($data)
         }
         print_r("\r\nSucces parts:$successParts, time: " . Timer::get("get") . "\r\n\r\n");
         if ($successParts == $server["y"]) {
-
             Timer::set("decode");
             foreach ($squares as $squareData) {
                 $world->addSquare(Square::decode($squareData));
             }
+            $zip = gzencode(json_encode($this->prepareData()));
             print_r("Decoded, time: " . Timer::get("decode") . " \r\n\r\n");
-            Timer::set("upload");
-            $zip = $world->toServer();
-            print_r("Uploading: " . Timer::get("upload") . "\r\n\r\n");
             $result["status"] = 1;
             $result["data"] = $zip;
         }
-        print_r("Total time: " . Timer::get("start"). "\r\n\r\n");
+        print_r("Total time: " . Timer::get("start") . "\r\n\r\n");
 
     } else {
         $result["status"] = 3;

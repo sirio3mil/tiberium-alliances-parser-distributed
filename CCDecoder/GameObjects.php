@@ -427,7 +427,7 @@ class World
 
     }
 
-    private function prepareData()
+    public function prepareData()
     {
         uasort($this->alliances, "World::sort");
 
@@ -442,7 +442,7 @@ class World
 
     public function toServer()
     {
-        $zip = gzcompress(json_encode($this->prepareData()));
+        $zip = gzencode(json_encode($this->prepareData()));
         $curler = Curler::create()
             ->setUrl("http://data.tiberium-alliances.com/savedata")
             ->setPostData(Curler::encodePost(

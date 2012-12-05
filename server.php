@@ -5,22 +5,22 @@ require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARA
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Timer.php";
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCAuth" . DIRECTORY_SEPARATOR . "CCAuth.php";
 require_once "lib/0MQ/0MQ/Ventilator.php";
+require_once "lib/0MQ/0MQ/Publisher.php";
 require_once "Generator.php";
 
 $context = new ZMQContext();
-$publisher = new ZMQSocket($context, ZMQ::SOCKET_PUB);
-$bind = "tcp://*:5556";
-$publisher->bind($bind);
 
-$server = new Ventilator(false, 5000);
-$server->bind("tcp://*:5555");
+$publisher = new Publisher(false, $context);
+$publisher->bind("tcp://*:5556");
+
+$ventilator = new Ventilator(false, 5000, $context);
+$ventilator->bind("tcp://*:5555");
 $generator = new Generator();
 
-$server->setGenerator(function () use($generator)
+$ventilator->setGenerator(function () use($generator)
 {
     Timer::set("session");
     $server = $generator->nextServer();
-//    print_r("Session get time: " . Timer::get("session") . PHP_EOL);
     if (!$server) {
         return false;
     }
@@ -35,7 +35,7 @@ $server->setGenerator(function () use($generator)
     return json_encode($server);
 });
 
-$server->setResponder(function ($data) use($generator, $publisher)
+$ventilator->setResponder(function ($data) use($generator, $publisher, $sequence)
 {
     $id = intval(substr($data, 0, 3));
     $status = intval(substr($data, 3, 2));
@@ -44,7 +44,7 @@ $server->setResponder(function ($data) use($generator, $publisher)
         case 1:
             print_r("Done :{$id}" . PHP_EOL);
             Timer::set("publish");
-            $publisher->send($data);
+            $publisher->send(sprintf("%03s", $id) . $data);
             print_r("Publish : " . Timer::get("publish") . PHP_EOL);
             break;
         case 2:
@@ -59,4 +59,4 @@ $server->setResponder(function ($data) use($generator, $publisher)
     }
 });
 
-$server->listen();
+$ventilator->listen();
