@@ -3,11 +3,12 @@ error_reporting(E_ALL);
 
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Curler.php";
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Timer.php";
-require_once "lib/0MQ/0MQ/Subscriber.php";
 
-$subscriber = new Subscriber("tcp://192.168.123.1:5556", 5000);
+require_once "lib/0MQ/0MQ/Worker.php";
 
-$subscriber->setListner(function($data)
+$wrk = new Worker("tcp://192.168.123.1:5557", 0, 2500, 10000);
+
+$wrk->setExecuter(function ($data)
 {
     $id = intval(substr($data, 0, 3));
     $zip = substr($data, 3);
@@ -25,11 +26,9 @@ $subscriber->setListner(function($data)
     $resp = $curler->post();
     $curler->close();
     print_r("Uploading $id... $resp: " . Timer::get("upload") . "\r\n\r\n");
+    return $resp;
 });
 
-$subscriber->setMisser(function($delay)
-{
-    print_r("Long delay :$delay" . PHP_EOL);
-});
+$wrk->work();
 
-$subscriber->listen();
+

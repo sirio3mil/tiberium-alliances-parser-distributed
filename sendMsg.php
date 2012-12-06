@@ -29,7 +29,7 @@ Everyone welcome!
 ";
 
     $post = "
- Added World 54, Welt 20, Мир 9.
+ Added Dünya3, World 55, Mundo 8 (España), Świat 5, World 56, Wereld 3. 
  ";
 
     $time = CCApi::getTime();
