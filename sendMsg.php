@@ -29,7 +29,8 @@ Everyone welcome!
 ";
 
     $post = "
- Added Dünya3, World 55, Mundo 8 (España), Świat 5, World 56, Wereld 3. 
+  Added Monde 8, World 57 (Europe), World 58 (USA East Coast), Welt 21, Mundo 5 Brazil.
+
  ";
 
     $time = CCApi::getTime();
