@@ -5,11 +5,11 @@ class Timer
 
     public static function set($timer)
     {
-        self::$timers[$timer] = microtime(true);
+        self::$timers[$timer] = microtime(true) * 1000;
     }
 
     public static function get($timer)
     {
-        return microtime(true) - self::$timers[$timer];
+        return microtime(true) * 1000 - self::$timers[$timer];
     }
 }

@@ -1,9 +1,6 @@
 <?php
 error_reporting(E_ALL);
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Curler.php";
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Timer.php";
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCAuth" . DIRECTORY_SEPARATOR . "CCAuth.php";
 require_once "lib/0MQ/0MQ/Ventilator.php";
 require_once "lib/0MQ/0MQ/Publisher.php";
 require_once "Generator.php";
@@ -19,7 +16,6 @@ $generator = new Generator();
 
 $ventilator->setGenerator(function () use($generator)
 {
-    Timer::set("session");
     $server = $generator->nextServer();
     if (!$server) {
         return false;

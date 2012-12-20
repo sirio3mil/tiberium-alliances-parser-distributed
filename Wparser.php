@@ -1,19 +1,19 @@
 <?php
 error_reporting(E_ALL);
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Curler.php";
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Timer.php";
+require_once "Util/Curler.php";
+require_once "Util/Timer.php";
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCAuth" . DIRECTORY_SEPARATOR . "CCAuth.php";
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCApi" . DIRECTORY_SEPARATOR . "CCApi.php";
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCDecoder" . DIRECTORY_SEPARATOR . "GameObjects.php";
+require_once "CCAuth/CCAuth.php";
+require_once "CCApi/CCApi.php";
+require_once "CCDecoder/GameObjects.php";
 
 require_once "lib/0MQ/0MQ/Worker.php";
+require_once "lib/0MQ/0MQ/Log.php";
 
 $wrk = new Worker("tcp://192.168.123.1:5555", false, 5000, 10000);
-
-$wrk->setExecuter(function ($data)
-{
+$log = new Log("tcp://192.168.123.1:5558", "wparser");
+$wrk->setExecuter(function ($data) use ($log) {
 
     Timer::set("start");
 
@@ -82,19 +82,25 @@ $wrk->setExecuter(function ($data)
         }
         print_r("\r\nSucces parts:$successParts, time: " . Timer::get("get") . "\r\n\r\n");
         if ($successParts == $server["y"]) {
-            Timer::set("decode");
+            Timer::set("Encode");
             foreach ($squares as $squareData) {
                 $world->addSquare(Square::decode($squareData));
             }
             $zip = gzencode(json_encode($world->prepareData()));
-            print_r("Decoded, time: " . Timer::get("decode") . " \r\n\r\n");
+            print_r("Encoded, time: " . Timer::get("Encode") . " \r\n\r\n");
             $result["status"] = 1;
             $result["data"] = $zip;
+
+            $totalTime = Timer::get("start");
+            print_r("Total time: " . $totalTime . "\r\n\r\n");
+            $log->info($totalTime);
+        } else {
+            $log->warn("parse_fail");
         }
-        print_r("Total time: " . Timer::get("start") . "\r\n\r\n");
 
     } else {
         $result["status"] = 3;
+        $log->warn("ses_drop");
     }
     $api->close();
     return sprintf("%03s", $result["Id"]) . sprintf("%02s", $result["status"]) . $result["data"];

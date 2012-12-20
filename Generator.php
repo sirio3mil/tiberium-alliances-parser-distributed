@@ -1,13 +1,20 @@
 <?php
+require_once "Util/Curler.php";
+require_once "Util/Timer.php";
+require_once "CCAuth/CCAuth.php";
+require_once "lib/0MQ/0MQ/Log.php";
+
 class Generator
 {
     private $servers;
     private $keys = array();
     private $sessions = array();
+    private $log;
 
     public function __construct()
     {
         $this->servers = require dirname(__FILE__) . DIRECTORY_SEPARATOR . "servers.php";
+        $this->log = new Log("tcp://192.168.123.1:5558", "auth");
     }
 
     public function nextServer()
@@ -34,9 +41,13 @@ class Generator
                 "forceReload" => true
             );
         }
+        Timer::set("session");
         $session = $this->sessions[$username]["auth"]->getSession($this->sessions[$username]["forceReload"]);
         if ($session) {
             $this->sessions[$username]["forceReload"] = false;
+            $this->log->info(Timer::get("session"));
+        } else {
+            $this->log->warn("ses_fail");
         }
         return $session;
     }
