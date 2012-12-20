@@ -111,8 +111,8 @@ class Monitor
         echo "Monitor report: ", date("H:i:s"), PHP_EOL;
         echo "==========================================================", PHP_EOL;
         echo ">>>>>Speed per min", PHP_EOL;
-        echo "World parse:            ", PHP_EOL;
-        echo "World upload:           ", PHP_EOL;
+        echo "World parse:            " . sprintf("%01.2f", $data["world_parsed"] == 0 ? 0 : ($data["world_parsed"] / ($this->eventsSaveInterval / 60000))), PHP_EOL;
+        echo "World upload:           " . sprintf("%01.2f", $data["world_uploaded"] == 0 ? 0 : ($data["world_uploaded"] / ($this->eventsSaveInterval / 60000))), PHP_EOL;
         echo ">>>>>Average in sec", PHP_EOL;
         echo "World parse:            " . sprintf("%01.2f", $data["world_parsed"] == 0 ? 0 : ($data["world_parsed_time"] / $data["world_parsed"]) / 1000), PHP_EOL;
         echo "World upload:           " . sprintf("%01.2f", $data["world_uploaded"] == 0 ? 0 : ($data["world_uploaded_time"] / $data["world_uploaded"]) / 1000), PHP_EOL;
