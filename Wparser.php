@@ -12,7 +12,7 @@ require_once "lib/0MQ/0MQ/Worker.php";
 require_once "lib/0MQ/0MQ/Log.php";
 
 $wrk = new Worker("tcp://192.168.123.1:5555", false, 5000, 10000);
-$log = new Log("tcp://192.168.123.1:5558", "wparser");
+$log = new Log("tcp://192.168.123.2:5558", "wparser");
 $wrk->setExecuter(function ($data) use ($log) {
 
     Timer::set("start");

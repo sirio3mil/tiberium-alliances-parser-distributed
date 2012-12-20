@@ -14,7 +14,7 @@ class Generator
     public function __construct()
     {
         $this->servers = require dirname(__FILE__) . DIRECTORY_SEPARATOR . "servers.php";
-        $this->log = new Log("tcp://192.168.123.1:5558", "auth");
+        $this->log = new Log("tcp://192.168.123.2:5558", "auth");
     }
 
     public function nextServer()

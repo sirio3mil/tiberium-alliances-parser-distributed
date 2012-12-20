@@ -7,7 +7,7 @@ require_once "lib/0MQ/0MQ/Worker.php";
 require_once "lib/0MQ/0MQ/Log.php";
 
 $wrk = new Worker("tcp://192.168.123.1:5557", 0, 2500, 10000);
-$log = new Log("tcp://192.168.123.1:5558", "wuploader");
+$log = new Log("tcp://192.168.123.2:5558", "wuploader");
 
 $wrk->setExecuter(function ($data) use ($log) {
     $id = intval(substr($data, 0, 3));

@@ -50,9 +50,57 @@ class Monitor
 
     private function calculate()
     {
-        $data = array();
-        foreach ($this->events as $event) {
+        $data = array(
+            "world_parsed" => 0,
+            "world_parsed_fail" => 0,
+            "world_parsed_time" => 0,
+            "session_dropped" => 0,
 
+            "world_uploaded" => 0,
+            "world_uploaded_fail" => 0,
+            "world_uploaded_time" => 0,
+
+            "auth" => 0,
+            "auth_fail" => 0,
+            "auth_time" => 0,
+
+            "errors" => 0,
+        );
+        foreach ($this->events as $event) {
+            switch ($event["from"]) {
+                case "wparser":
+                    if ($event["level"] == "WARN") {
+                        if ($event["data"] == "ses_drop") {
+                            $data["session_dropped"]++;
+                        }
+                        if ($event["data"] == "parse_fail") {
+                            $data["world_parsed_fail"]++;
+                        }
+                    }
+                    if ($event["level"] == "INFO") {
+                        $data["world_parsed"]++;
+                        $data["world_parsed_time"] += $event["data"][0];
+                    }
+                    break;
+                case "wuploader":
+                    if ($event["level"] == "WARN") {
+                        $data["world_uploaded_fail"]++;
+                    }
+                    if ($event["level"] == "INFO") {
+                        $data["world_uploaded"]++;
+                        $data["world_uploaded_time"] += $event["data"][0];
+                    }
+                    break;
+                case "auth":
+                    if ($event["level"] == "WARN") {
+                        $data["auth_fail"]++;
+                    }
+                    if ($event["level"] == "INFO") {
+                        $data["auth"]++;
+                        $data["auth_time"] += $event["data"][0];
+                    }
+                    break;
+            }
         }
         return $data;
     }
@@ -66,17 +114,18 @@ class Monitor
         echo "World parse:            ", PHP_EOL;
         echo "World upload:           ", PHP_EOL;
         echo ">>>>>Average in sec", PHP_EOL;
-        echo "World parse:            ", PHP_EOL;
-        echo "World upload:           ", PHP_EOL;
-        echo ">>>>>Absolute in " . sprintf("%d", $this->eventsSaveInterval / 1000) . " seconds", PHP_EOL;
-        echo "World parsed success:   ", PHP_EOL;
-        echo "World parsed fail:      ", PHP_EOL;
-        echo "World uploaded success: ", PHP_EOL;
-        echo "World uploaded fail:    ", PHP_EOL;
-        echo "Auth success:           ", PHP_EOL;
-        echo "Auth failed:            ", PHP_EOL;
-        echo "Session dropped:        ", PHP_EOL;
-        echo "Errors:                 ", PHP_EOL;
+        echo "World parse:            " . sprintf("%01.2f", $data["world_parsed"] == 0 ? 0 : ($data["world_parsed_time"] / $data["world_parsed"]) / 1000), PHP_EOL;
+        echo "World upload:           " . sprintf("%01.2f", $data["world_uploaded"] == 0 ? 0 : ($data["world_uploaded_time"] / $data["world_uploaded"]) / 1000), PHP_EOL;
+        echo "Authorize:              " . sprintf("%01.2f", $data["auth"] == 0 ? 0 : ($data["auth_time"] / $data["auth"]) / 1000), PHP_EOL;
+        echo ">>>>>Absolute in " . sprintf("%01.2f", $this->eventsSaveInterval / 1000) . " seconds", PHP_EOL;
+        echo "World parsed success:   " . $data["world_parsed"], PHP_EOL;
+        echo "World parsed fail:      " . $data["world_parsed_fail"], PHP_EOL;
+        echo "World uploaded success: " . $data["world_uploaded"], PHP_EOL;
+        echo "World uploaded fail:    " . $data["world_uploaded_fail"], PHP_EOL;
+        echo "Auth success:           " . $data["auth"], PHP_EOL;
+        echo "Auth failed:            " . $data["auth_fail"], PHP_EOL;
+        echo "Session dropped:        " . $data["session_dropped"], PHP_EOL;
+        echo "Errors:                 " . $data["errors"], PHP_EOL;
     }
 
 }
@@ -84,8 +133,6 @@ class Monitor
 $monitor = new Monitor();
 $c = new Concentrator("tcp://*:5558");
 $c->setReceiver(function ($data) use ($monitor) {
-    print_r($data);
-    echo PHP_EOL;
     $level = array(
         1 => "ERROR",
         2 => "WARN",
