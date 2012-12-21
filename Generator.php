@@ -44,8 +44,10 @@ class Generator
         Timer::set("session");
         $session = $this->sessions[$username]["auth"]->getSession($this->sessions[$username]["forceReload"]);
         if ($session) {
+            if ($this->sessions[$username]["forceReload"]) {
+                $this->log->info(Timer::get("session"));
+            }
             $this->sessions[$username]["forceReload"] = false;
-            $this->log->info(Timer::get("session"));
         } else {
             $this->log->warn("ses_fail");
         }

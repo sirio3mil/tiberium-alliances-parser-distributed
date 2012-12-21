@@ -19,14 +19,18 @@ class Monitor
         $this->eventsSaveInterval = $eventsSaveInterval;
         $this->renderInterval = $renderInterval;
         $this->verbose = $verbose;
+        $this->lastRender = microtime(1) * 1000;
     }
 
     private function cleanup()
     {
         Timer::set("cleanup");
+
         $barrier = microtime(1) * 1000 - $this->eventsSaveInterval;
-        while (isset($this->events[0]) && $this->events[0]["ts"] < $barrier) {
-            array_shift($this->events);
+        foreach ($this->events as $k => $event) {
+            if ($event["ts"] < $barrier) {
+                unset($this->events[$k]);
+            }
         }
 
         if ($this->verbose) {
@@ -44,6 +48,7 @@ class Monitor
         if ($this->lastRender + $this->renderInterval > microtime(1) * 1000) {
             return;
         }
+        $this->lastRender = microtime(1) * 1000;
         $this->cleanup();
         $this->printData($this->calculate());
     }
@@ -65,8 +70,10 @@ class Monitor
             "auth_time" => 0,
 
             "errors" => 0,
+            "events" => 0,
         );
         foreach ($this->events as $event) {
+            $data["events"]++;
             switch ($event["from"]) {
                 case "wparser":
                     if ($event["level"] == "WARN") {
@@ -125,6 +132,7 @@ class Monitor
         echo "Auth success:           " . $data["auth"], PHP_EOL;
         echo "Auth failed:            " . $data["auth_fail"], PHP_EOL;
         echo "Session dropped:        " . $data["session_dropped"], PHP_EOL;
+        echo "Events:                 " . $data["events"], PHP_EOL;
         echo "Errors:                 " . $data["errors"], PHP_EOL;
     }
 
@@ -139,12 +147,14 @@ $c->setReceiver(function ($data) use ($monitor) {
         3 => "INFO",
         4 => "DEBUG",
     );
-    $monitor->addEvent(array(
-            "from" => $data[0],
-            "ts" => $data[1],
-            "level" => $level[$data[2]],
-            "data" => array_slice($data, 3))
-    );
+    if ($data) {
+        $monitor->addEvent(array(
+                "from" => $data[0],
+                "ts" => $data[1],
+                "level" => $level[$data[2]],
+                "data" => array_slice($data, 3))
+        );
+    }
     $monitor->render();
 });
 $c->bind();
