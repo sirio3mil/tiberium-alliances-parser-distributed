@@ -117,14 +117,14 @@ class Monitor
         echo PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL;
         echo "Monitor report: ", date("H:i:s"), PHP_EOL;
         echo "==========================================================", PHP_EOL;
-        echo ">>>>>Speed per min", PHP_EOL;
+        echo ">>>>> Speed per min", PHP_EOL;
         echo "World parse:            " . sprintf("%01.2f", $data["world_parsed"] == 0 ? 0 : ($data["world_parsed"] / ($this->eventsSaveInterval / 60000))), PHP_EOL;
         echo "World upload:           " . sprintf("%01.2f", $data["world_uploaded"] == 0 ? 0 : ($data["world_uploaded"] / ($this->eventsSaveInterval / 60000))), PHP_EOL;
         echo ">>>>>Average in sec", PHP_EOL;
         echo "World parse:            " . sprintf("%01.2f", $data["world_parsed"] == 0 ? 0 : ($data["world_parsed_time"] / $data["world_parsed"]) / 1000), PHP_EOL;
         echo "World upload:           " . sprintf("%01.2f", $data["world_uploaded"] == 0 ? 0 : ($data["world_uploaded_time"] / $data["world_uploaded"]) / 1000), PHP_EOL;
         echo "Authorize:              " . sprintf("%01.2f", $data["auth"] == 0 ? 0 : ($data["auth_time"] / $data["auth"]) / 1000), PHP_EOL;
-        echo ">>>>>Absolute in " . sprintf("%01.2f", $this->eventsSaveInterval / 1000) . " seconds", PHP_EOL;
+        echo ">>>>> Absolute in " . sprintf("%01.2f", $this->eventsSaveInterval / 1000) . " seconds", PHP_EOL;
         echo "World parsed success:   " . $data["world_parsed"], PHP_EOL;
         echo "World parsed fail:      " . $data["world_parsed_fail"], PHP_EOL;
         echo "World uploaded success: " . $data["world_uploaded"], PHP_EOL;
@@ -138,7 +138,7 @@ class Monitor
 
 }
 
-$monitor = new Monitor();
+$monitor = new Monitor(300000, 1000);
 $c = new Concentrator("tcp://*:5558");
 $c->setReceiver(function ($data) use ($monitor) {
     $level = array(
@@ -147,7 +147,7 @@ $c->setReceiver(function ($data) use ($monitor) {
         3 => "INFO",
         4 => "DEBUG",
     );
-    if ($data) {
+    if ($data && $data[0] != 'auth') {
         $monitor->addEvent(array(
                 "from" => $data[0],
                 "ts" => $data[1],
