@@ -20,6 +20,7 @@ class Monitor
         $this->renderInterval = $renderInterval;
         $this->verbose = $verbose;
         $this->lastRender = microtime(1) * 1000;
+        $this->events = array();
     }
 
     private function cleanup()
@@ -116,9 +117,9 @@ class Monitor
                     }
                     break;
             }
-            $data["parse_workers"] = sizeof($data["parse_workers"]);
-            $data["upload_workers"] = sizeof($data["upload_workers"]);
         }
+        $data["parse_workers"] = sizeof($data["parse_workers"]);
+        $data["upload_workers"] = sizeof($data["upload_workers"]);
         return $data;
     }
 
