@@ -71,11 +71,18 @@ class Monitor
 
             "errors" => 0,
             "events" => 0,
+
+            "parse_workers" => array(),
+            "upload_workers" => array(),
         );
         foreach ($this->events as $event) {
             $data["events"]++;
-            switch ($event["from"]) {
+            if ($event["level"] == "ERROR") {
+                $data["errors"]++;
+            }
+            switch ($event["type"]) {
                 case "wparser":
+                    $data["parse_workers"][$event["id"]] = 1;
                     if ($event["level"] == "WARN") {
                         if ($event["data"] == "ses_drop") {
                             $data["session_dropped"]++;
@@ -90,6 +97,7 @@ class Monitor
                     }
                     break;
                 case "wuploader":
+                    $data["upload_workers"][$event["id"]] = 1;
                     if ($event["level"] == "WARN") {
                         $data["world_uploaded_fail"]++;
                     }
@@ -108,6 +116,8 @@ class Monitor
                     }
                     break;
             }
+            $data["parse_workers"] = sizeof($data["parse_workers"]);
+            $data["upload_workers"] = sizeof($data["upload_workers"]);
         }
         return $data;
     }
@@ -116,19 +126,21 @@ class Monitor
     {
         echo PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL, PHP_EOL;
         echo "Monitor report: ", date("H:i:s"), PHP_EOL;
-        echo "==========================================================", PHP_EOL;
+        echo "=======================================", PHP_EOL;
         echo ">>>>> Speed per min", PHP_EOL;
         echo "World parse:            " . sprintf("%01.2f", $data["world_parsed"] == 0 ? 0 : ($data["world_parsed"] / ($this->eventsSaveInterval / 60000))), PHP_EOL;
         echo "World upload:           " . sprintf("%01.2f", $data["world_uploaded"] == 0 ? 0 : ($data["world_uploaded"] / ($this->eventsSaveInterval / 60000))), PHP_EOL;
-        echo ">>>>>Average in sec", PHP_EOL;
+        echo ">>>>> Average op in sec", PHP_EOL;
         echo "World parse:            " . sprintf("%01.2f", $data["world_parsed"] == 0 ? 0 : ($data["world_parsed_time"] / $data["world_parsed"]) / 1000), PHP_EOL;
         echo "World upload:           " . sprintf("%01.2f", $data["world_uploaded"] == 0 ? 0 : ($data["world_uploaded_time"] / $data["world_uploaded"]) / 1000), PHP_EOL;
         echo "Authorize:              " . sprintf("%01.2f", $data["auth"] == 0 ? 0 : ($data["auth_time"] / $data["auth"]) / 1000), PHP_EOL;
         echo ">>>>> Absolute in " . sprintf("%01.2f", $this->eventsSaveInterval / 1000) . " seconds", PHP_EOL;
         echo "World parsed success:   " . $data["world_parsed"], PHP_EOL;
         echo "World parsed fail:      " . $data["world_parsed_fail"], PHP_EOL;
+        echo "World parse workers:    " . $data["parse_workers"], PHP_EOL;
         echo "World uploaded success: " . $data["world_uploaded"], PHP_EOL;
         echo "World uploaded fail:    " . $data["world_uploaded_fail"], PHP_EOL;
+        echo "World upload workers:   " . $data["upload_workers"], PHP_EOL;
         echo "Auth success:           " . $data["auth"], PHP_EOL;
         echo "Auth failed:            " . $data["auth_fail"], PHP_EOL;
         echo "Session dropped:        " . $data["session_dropped"], PHP_EOL;
@@ -149,10 +161,11 @@ $c->setReceiver(function ($data) use ($monitor) {
     );
     if ($data && $data[0] != 'auth') {
         $monitor->addEvent(array(
-                "from" => $data[0],
-                "ts" => $data[1],
-                "level" => $level[$data[2]],
-                "data" => array_slice($data, 3))
+                "id" => $data[0],
+                "type" => $data[1],
+                "ts" => $data[2],
+                "level" => $level[$data[3]],
+                "data" => array_slice($data, 4))
         );
     }
     $monitor->render();
