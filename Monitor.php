@@ -159,7 +159,7 @@ $c->setReceiver(function ($data) use ($monitor) {
         3 => "INFO",
         4 => "DEBUG",
     );
-    if ($data && $data[0] != 'auth') {
+    if ($data && $data[0] != 'auth' && $data[1] != 'auth') {
         $monitor->addEvent(array(
                 "id" => $data[0],
                 "type" => $data[1],
