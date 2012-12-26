@@ -11,6 +11,7 @@ require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCDecoder" . DIRECTORY_S
 Timer::set("start");
 
 $authorizator = new CCAuth("limitium@gmail.com", "qweqwe123");
+//$authorizator = new CCAuth("Chrismisztur@yahoo.com", "usnorthcom1A");
 $ses = $authorizator->getSession();
 
 print_r("Time: " . Timer::get("start") . "\r\n\r\n");

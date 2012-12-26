@@ -141,7 +141,7 @@ class CCApi
 
     public static function getTime()
     {
-        return round(microtime(1) * 1000) * 2;
+        return sprintf("%.0f",round(microtime(1) * 1000));
     }
 
     public function close()
