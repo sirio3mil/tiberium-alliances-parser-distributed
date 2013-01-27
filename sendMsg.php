@@ -29,7 +29,7 @@ Everyone welcome!
 ";
 
     $post = "
-  Added Monde 8, World 57 (Europe), World 58 (USA East Coast), Welt 21, Mundo 5 Brazil.
+  Added World 63 (Europe), Mundo 10 (España), Mundo 6 Brazil, Welt 24, Мир 12, World 64 (USA East Coast), World 65 (USA West Coast).
 
  ";
 
