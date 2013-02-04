@@ -33,7 +33,9 @@ $wrk->setExecuter(function ($data) use ($log) {
         $time = CCApi::getTime();
 
         $data = $api->poll(array(
-            "requests" => "WC:A\fCTIME:$time\fCHAT:\fWORLD:\fGIFT:\fACS:0\fASS:0\fCAT:0\f"
+//            "requests" => "WC:A\fCTIME:$time\fCHAT:\fWORLD:\fGIFT:\fACS:0\fASS:0\fCAT:0\f"
+            "requests" => "UA\fWC:AC\fTIME:$time\fCHAT:\fWORLD:\fGIFT:\fACS:0\fASS:0\fCAT:0\f"
+//            "requests" => "WC:ATIME:" + $time + "CHAT:WORLD:GIFT:ACS:0ASS:0CAT:0"
         ));
         if ($data) {
             foreach ($data as $part) {
@@ -55,7 +57,7 @@ $wrk->setExecuter(function ($data) use ($log) {
 
                 $time = CCApi::getTime();
                 $resp = $api->poll(array(
-                    "requests" => "UA\fWC:A\fCTIME:$time\fCHAT:\fWORLD:$request\fGIFT:\fACS:1\fASS:1\fCAT:1\f"
+                    "requests" => "UA\fWC:AC\fTIME:$time\fCHAT:\fWORLD:$request\fGIFT:\fACS:1\fASS:1\fCAT:1\f"
                 ), true);
 
 

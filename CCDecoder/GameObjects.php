@@ -467,7 +467,7 @@ class World
         $this->serverTime = array(
             "d" => $data->d,
             "o" => $data->o,
-            "r" => $data->r,
+            "r" => sprintf("%.0f", $data->r),
             "s" => $data->s,
             "rt" => $requestTime
         );
