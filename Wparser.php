@@ -32,11 +32,10 @@ $wrk->setExecuter(function ($data) use ($log) {
 
         $time = CCApi::getTime();
 
-        $resp = $api->poll(array(
+        $data = $api->poll(array(
             "requests" => "WC:A\fCTIME:$time\fCHAT:\fWORLD:\fGIFT:\fACS:0\fASS:0\fCAT:0\f"
         ));
-        if ($resp) {
-            $data = json_decode($resp);
+        if ($data) {
             foreach ($data as $part) {
                 if (isset($part->d->__type)) {
                     if ($part->d->__type == "TIME") {
