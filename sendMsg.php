@@ -29,7 +29,7 @@ Everyone welcome!
 ";
 
     $post = "
-  Added World 63 (Europe), Mundo 10 (España), Mundo 6 Brazil, Welt 24, Мир 12, World 64 (USA East Coast), World 65 (USA West Coast).
+  Fixed world 63 error! Everyone welcome.
 
  ";
 

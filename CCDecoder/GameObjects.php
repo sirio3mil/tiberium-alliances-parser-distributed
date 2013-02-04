@@ -314,6 +314,8 @@ class World
     public $alliances = array();
     public $bases = array();
     public $pois = array();
+    public $serverTime = array();
+    public $endgames = array();
     private $server;
 
     public function __construct($server)
@@ -436,6 +438,8 @@ class World
             'alliances' => array_values($this->alliances),
             'pois' => array_values($this->pois),
             'timestamp' => "_%timestamp%_",
+            'server_time' => $this->serverTime,
+            'endgames' => $this->endgames
         );
         return $data;
     }
@@ -446,15 +450,35 @@ class World
         $curler = Curler::create()
             ->setUrl("http://data.tiberium-alliances.com/savedata")
             ->setPostData(Curler::encodePost(
-                array(
-                    'key' => "wohdfo97wg4iurvfdc t7yaigvrufbs",
-                    'world' => $this->server,
-                    'data' => $zip)
+                    array(
+                        'key' => "wohdfo97wg4iurvfdc t7yaigvrufbs",
+                        'world' => $this->server,
+                        'data' => $zip)
+                )
             )
-        )
             ->withHeaders(false);
         $curler->post();
         $curler->close();
         return $zip;
+    }
+
+    public function setServerTime($data, $requestTime)
+    {
+        $this->serverTime = array(
+            "d" => $data->d,
+            "o" => $data->o,
+            "r" => $data->r,
+            "s" => $data->s,
+            "rt" => $requestTime
+        );
+    }
+
+    public function setEndGame($data)
+    {
+        foreach ($data as $endgame) {
+            unset($endgame->__type);
+            $this->endgames[] = $endgame;
+        }
+
     }
 }

@@ -35,47 +35,60 @@ $wrk->setExecuter(function ($data) use ($log) {
         $resp = $api->poll(array(
             "requests" => "WC:A\fCTIME:$time\fCHAT:\fWORLD:\fGIFT:\fACS:0\fASS:0\fCAT:0\f"
         ));
+        if ($resp) {
+            $data = json_decode($resp);
+            foreach ($data as $part) {
+                if (isset($part->d->__type)) {
+                    if ($part->d->__type == "TIME") {
+                        $world->setServerTime($part->d, $time);
+                    }
+                    if ($part->d->__type == "ENDGAME") {
+                        $world->setEndGame($part->d->ch);
+                    }
+                }
+            }
 
-        $successParts = 0;
-        $squares = array();
-        for ($y = 0; $y <= $server["y"]; $y += 1) {
+            $successParts = 0;
+            $squares = array();
+            for ($y = 0; $y <= $server["y"]; $y += 1) {
 
-            $request = $world->request(0, $y, $server["x"], $y);
+                $request = $world->request(0, $y, $server["x"], $y);
 
-            $time = CCApi::getTime();
-            $resp = $api->poll(array(
-                "requests" => "UA\fWC:A\fCTIME:$time\fCHAT:\fWORLD:$request\fGIFT:\fACS:1\fASS:1\fCAT:1\f"
-            ), true);
+                $time = CCApi::getTime();
+                $resp = $api->poll(array(
+                    "requests" => "UA\fWC:A\fCTIME:$time\fCHAT:\fWORLD:$request\fGIFT:\fACS:1\fASS:1\fCAT:1\f"
+                ), true);
 
 
-            if ($resp) {
-                $data = json_decode($resp);
-                if ($data) {
-                    $squares = array();
-                    print_r("Row: $y");
-                    $hasSquares = false;
-                    foreach ($data as $part) {
-                        if (isset($part->d->__type) && $part->d->__type == "WORLD") {
-                            $hasSquares = true;
+                if ($resp) {
+                    $data = json_decode($resp);
+                    if ($data) {
+                        $squares = array();
+                        print_r("Row: $y");
+                        $hasSquares = false;
+                        foreach ($data as $part) {
+                            if (isset($part->d->__type) && $part->d->__type == "WORLD") {
+                                $hasSquares = true;
 
-                            unset($part->d->u);
-                            unset($part->d->t);
-                            unset($part->d->v);
+                                unset($part->d->u);
+                                unset($part->d->t);
+                                unset($part->d->v);
 
-                            $squaresSize = sizeof($part->d->s);
-                            print_r(" squares: " . $squaresSize . "\r\n");
-                            if ($squaresSize != $server["x"]) {
-                                break 2;
-                            } else {
-                                $successParts++;
-                            }
-                            foreach ($part->d->s as $squareData) {
-                                $world->addSquare(Square::decode($squareData));
+                                $squaresSize = sizeof($part->d->s);
+                                print_r(" squares: " . $squaresSize . "\r\n");
+                                if ($squaresSize != $server["x"]) {
+                                    break 2;
+                                } else {
+                                    $successParts++;
+                                }
+                                foreach ($part->d->s as $squareData) {
+                                    $world->addSquare(Square::decode($squareData));
+                                }
                             }
                         }
-                    }
-                    if (!$hasSquares) {
-                        break;
+                        if (!$hasSquares) {
+                            break;
+                        }
                     }
                 }
             }
