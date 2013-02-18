@@ -29,7 +29,7 @@ Everyone welcome!
 ";
 
     $post = "
-  Fixed world 63 error! Everyone welcome.
+  Added World 66 (Europe), Welt 25, Мир 13.
 
  ";
 
