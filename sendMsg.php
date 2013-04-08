@@ -29,7 +29,7 @@ Everyone welcome!
 ";
 
     $post = "
-  Added World 66 (Europe), Welt 25, Мир 13.
+    Added Dunia 1, 1 العالم
 
  ";
 

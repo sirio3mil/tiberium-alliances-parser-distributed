@@ -476,9 +476,25 @@ class World
     public function setEndGame($data)
     {
         foreach ($data as $endgame) {
-            unset($endgame->__type);
-            $this->endgames[] = $endgame;
-        }
+            $point = array();
 
+            $pos = 0;
+            $out = new stdClass();
+            $id = Base91::DecodeFlexInt($endgame, $pos, $out);
+            $pos += $out->size;
+            $version = Base91::DecodeFlexInt($endgame, $pos, $out);
+            $pos += $out->size;
+            $coordId = Base91::Decode26Bits($endgame, $pos);
+            $pos += 4;
+            $details = Base91::Decode13Bits($endgame, $pos);
+
+            $point['type'] = ($details & 0x3);
+            if($point['type'] == 2){
+                $point['step'] = ($details >> 2);
+            }
+            $point['x'] = ($coordId & 0x3ff);
+            $point['y'] = ($coordId >> 13);
+            $this->endgames[] = $point;
+        }
     }
 }
