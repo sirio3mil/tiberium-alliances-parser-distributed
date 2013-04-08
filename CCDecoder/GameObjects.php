@@ -492,7 +492,7 @@ class World
             if($point['type'] == 2){
                 $point['step'] = ($details >> 2);
             }
-            $point['x'] = ($coordId & 0x3ff);
+            $point['x'] = ($coordId & 0x1fff);
             $point['y'] = ($coordId >> 13);
             $this->endgames[] = $point;
         }
