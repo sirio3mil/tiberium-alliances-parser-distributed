@@ -22,8 +22,18 @@ function checkNewServers(CCApi $api, &$servers)
 {
     foreach ($api->getServers()->Servers as $server) {
         if (!isset($servers[$server->Id])) {
-            $server->x = 32;
-            $server->y = 32;
+            $size = 32;
+            if (isset($server->MaxPlayers)) {
+                if ($server->MaxPlayers == 30000) {
+                    $size = 35;
+                    $server->version = 2;
+                }
+                if ($server->MaxPlayers == 50000) {
+                    $size = 50;
+                }
+            }
+            $server->x = $size;
+            $server->y = $size;
             $server->u = "empty";
             $server->p = "qweqwe123";
             unset($server->Faction);

@@ -29,7 +29,7 @@ Everyone welcome!
 ";
 
     $post = "
-    Added Dunia 1, 1 العالم
+   Added Welt 31, Mundo 14 (España), World 78 (Europe), World 79 (USA West Coast).
 
  ";
 
