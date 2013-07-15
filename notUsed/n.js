@@ -18,7 +18,9 @@ function qwe(a, b, c, d) {
     var islatered = (g >> 3 & 1) != 0;
     var hascooldown = (g >> 4 & 1) != 0;
     var hasrecovery = (g >> 5 & 1) != 0;
+
     var h = (g >> 6 & 1) != 0;
+
     this.level = g >> 7 & 255;
     this.radius = g >> 15 & 15;
     this.playerid = g >> 22 & 1023;

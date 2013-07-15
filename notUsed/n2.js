@@ -10,6 +10,7 @@ function parseCity(a, b, c, d) {
     this.move1 = -1;
     this.move2 = -1;
     this.end = -1;
+
     var g = $I.MWQOJC.EBDMNN(c, d);
     this.isAttacked = ((g & 1) != 0);
     var isLocked = (((g >> 1) & 1) != 0);
@@ -17,8 +18,10 @@ function parseCity(a, b, c, d) {
     var isAltered = (((g >> 3) & 1) != 0);
     var hasCoolDown = (((g >> 4) & 1) != 0);
     var hasRecovery = (((g >> 5) & 1) != 0);
+
     var m = (((g >> 6) & 1) != 0);
     var n = (((g >> 7) & 1) != 0);
+
     this.level = ((g >> 8) & 0xff);
     this.radius = ((g >> 0x10) & 15);
     this.playerId = ((g >> 0x16) & 0x3ff);

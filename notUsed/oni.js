@@ -233,8 +233,10 @@ function ClientLib.Data.WorldSector.WorldObjectCity.prototype.$ctor (type, world
     var isAltered = (g >> 3 & 1) != 0;
     var hasCool = (g >> 4 & 1) != 0;
     var hasRec = (g >> 5 & 1) != 0;
+
     var moveRecovery = (g >> 6 & 1) != 0;
     var isDefenceDamaged = (g >> 7 & 1) != 0;
+
     this.level = g >> 8 & 255;
     this.radius = g >> 16 & 15;
     this.playerId = g >> 22 & 1023;
