@@ -218,9 +218,11 @@ class City extends AliveBase
         $base->hasRecovery = ((($cityData >> 5) & 1) != 0);
         $base->hasMoveRecovery = ((($cityData >> 6) & 1) != 0);
         $base->isDefenseDamaged = ((($cityData >> 7) & 1) != 0);
-        $base->level = (($cityData >> 8) & 255);
-        $base->radius = (($cityData >> 16) & 15);
-        $base->playerId = (($cityData >> 22) & 1023);
+
+
+        $base->level = (($cityData >> 8) & 0xff);
+        $base->radius = (($cityData >> 0x10) & 15);
+        $base->playerId = (($cityData >> 0x16) & 0x3ff);
         $pos += 5;
 
 
@@ -279,7 +281,6 @@ class POI extends Marker
     public $level;
     public $type;
     public $OwnerAllianceId;
-    public $OwnerAllianceName;
 
     /**
      * @static
@@ -293,17 +294,10 @@ class POI extends Marker
         $poiData = Base91::Decode26Bits($details, $pos);
         $poi->level = $poiData & 255;
         $poi->type = $poiData >> 8 & 7; //ClientLib.Data.WorldSector.WorldObjectPointOfInterest.EPOIType.Defense;
+        $poi->OwnerAllianceId = (($poiData >> 11) & 0x3ff);
         $pos += 4;
         $out = new stdClass();
         $poi->_id = Base91::DecodeFlexInt($details, $pos, $out);
-        $pos += $out->size;
-        $poi->OwnerAllianceId = Base91::DecodeFlexInt($details, $pos, $out);
-        $pos += $out->size;
-        if ($poi->OwnerAllianceId > 0) {
-            $poi->OwnerAllianceName = substr($details, $pos);
-        } else {
-            $poi->OwnerAllianceName = "";
-        }
         return $poi;
     }
 }
@@ -406,12 +400,16 @@ class World
                     );
                     break;
                 case "POI":
+                    $poiAllianceId = "";
+                    if ($mark->OwnerAllianceId != 0) {
+                        $poiAllianceId = $square->alliances[$mark->OwnerAllianceId]['_id'];
+                    }
                     $this->pois[] = array(
                         'x' => $mark->x,
                         'y' => $mark->y,
                         't' => $mark->type,
                         'l' => $mark->level,
-                        'a' => $mark->OwnerAllianceId,
+                        'a' => $poiAllianceId,
                     );
                     break;
             }
@@ -489,7 +487,7 @@ class World
             $details = Base91::Decode13Bits($endgame, $pos);
 
             $point['type'] = ($details & 0x3);
-            if($point['type'] == 2){
+            if ($point['type'] == 2) {
                 $point['step'] = ($details >> 2);
             }
             $point['x'] = ($coordId & 0x1fff);

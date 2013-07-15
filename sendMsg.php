@@ -29,7 +29,7 @@ Everyone welcome!
 ";
 
     $post = "
-   Added Welt 31, Mundo 14 (España), World 78 (Europe), World 79 (USA West Coast).
+   Added World 80 (USA East Coast), Fixed Welt 31, Mundo 14 (España), World 78 (Europe), World 79 (USA West Coast).
 
  ";
 

@@ -6,7 +6,7 @@ require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARA
 
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCAuth" . DIRECTORY_SEPARATOR . "CCAuth.php";
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCApi" . DIRECTORY_SEPARATOR . "CCApi.php";
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCDecoder" . DIRECTORY_SEPARATOR . "GameObjects.php";
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCDecoder" . DIRECTORY_SEPARATOR . "GameObjects2.php";
 
 Timer::set("start");
 

@@ -64,7 +64,6 @@ $wrk->setExecuter(function ($data) use ($log) {
                 if ($resp) {
                     $data = json_decode($resp);
                     if ($data) {
-                        $squares = array();
                         print_r("Row: $y");
                         $hasSquares = false;
                         foreach ($data as $part) {
@@ -83,7 +82,7 @@ $wrk->setExecuter(function ($data) use ($log) {
                                     $successParts++;
                                 }
                                 foreach ($part->d->s as $squareData) {
-                                    $world->addSquare(Square::decode($squareData));
+                                    $squares[]=$squareData;
                                 }
                             }
                         }
@@ -106,7 +105,7 @@ $wrk->setExecuter(function ($data) use ($log) {
             $result["data"] = $zip;
 
             $totalTime = Timer::get("start");
-            print_r("Total time: " . $totalTime . "\r\n\r\n");
+            print_r("Total time world ".$server["Id"].": " . $totalTime . "\r\n\r\n");
             $log->info($totalTime);
         } else {
             $log->warn("parse_fail");
