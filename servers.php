@@ -1,19 +1,19 @@
 <?php return array (
-  'util' => 
+  'util' =>
   array (
     'u' => 'lutil@mailinator.com',
     'p' => 'qweqwe123',
     'x' => 32,
     'y' => 32,
   ),
-  'limitium' => 
+  'limitium' =>
   array (
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
     'x' => 32,
     'y' => 32,
   ),
-  10 => 
+  10 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => '1st Closed Beta server. Slots for 25,000 players.',
@@ -28,7 +28,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  11 => 
+  11 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => '2nd Closed Beta server. Slots for 50,000 players.',
@@ -43,7 +43,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  12 => 
+  12 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => '3rd Closed Beta server. Slots for 25,000 players.',
@@ -58,7 +58,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  13 => 
+  13 =>
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -73,7 +73,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  14 => 
+  14 =>
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -88,10 +88,10 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  15 => 
+  15 =>
   array (
     'AcceptNewPlayer' => false,
-    'Description' => 'Slots für 25,000 Spieler.',
+    'Description' => 'Slots f?r 25,000 Spieler.',
     'Id' => 15,
     'Language' => 'de',
     'Name' => 'Welt 1',
@@ -103,10 +103,10 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  16 => 
+  16 =>
   array (
     'AcceptNewPlayer' => false,
-    'Description' => 'Slots für 25,000 Spieler.',
+    'Description' => 'Slots f?r 25,000 Spieler.',
     'Id' => 16,
     'Language' => 'de',
     'Name' => 'Welt 2',
@@ -118,7 +118,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  17 => 
+  17 =>
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -133,7 +133,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  18 => 
+  18 =>
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -148,10 +148,10 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  19 => 
+  19 =>
   array (
     'AcceptNewPlayer' => false,
-    'Description' => 'Slots für 25,000 Spieler.',
+    'Description' => 'Slots f?r 25,000 Spieler.',
     'Id' => 19,
     'Language' => 'de',
     'Name' => 'Welt 3',
@@ -162,8 +162,9 @@
     'y' => 32,
     'p' => 'qweqwe123',
     'u' => 'lwelt3@mailinator.com',
+    'skip' => true,
   ),
-  20 => 
+  20 =>
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -178,7 +179,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  21 => 
+  21 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -193,7 +194,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  24 => 
+  24 =>
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -208,7 +209,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  25 => 
+  25 =>
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -222,11 +223,12 @@
     'y' => 32,
     'p' => 'qweqwe123',
     'u' => 'lworld11@mailinator.com',
+    'skip' => true,
   ),
-  26 => 
+  26 =>
   array (
     'AcceptNewPlayer' => false,
-    'Description' => 'Slots für 25,000 Spieler.',
+    'Description' => 'Slots f?r 25,000 Spieler.',
     'Id' => 26,
     'Language' => 'de',
     'Name' => 'Welt 4',
@@ -237,8 +239,9 @@
     'y' => 32,
     'p' => 'qweqwe123',
     'u' => 'lwelt4@mailinator.com',
+    'skip' => true,
   ),
-  27 => 
+  27 =>
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -252,8 +255,9 @@
     'y' => 32,
     'p' => 'qweqwe123',
     'u' => 'lworld12@mailinator.com',
+    'skip' => true,
   ),
-  28 => 
+  28 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -267,8 +271,9 @@
     'y' => 32,
     'p' => 'qweqwe123',
     'u' => 'lworld13@mailinator.com',
+    'skip' => true,
   ),
-  29 => 
+  29 =>
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -282,8 +287,9 @@
     'y' => 32,
     'p' => 'qweqwe123',
     'u' => 'lworld15@mailinator.com',
+    'skip' => true,
   ),
-  30 => 
+  30 =>
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -298,7 +304,7 @@
     'p' => 'qweqwe123',
     'u' => 'lworld14@mailinator.com',
   ),
-  31 => 
+  31 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -313,7 +319,7 @@
     'p' => 'qweqwe123',
     'u' => 'lworld16@mailinator.com',
   ),
-  32 => 
+  32 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -328,7 +334,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  33 => 
+  33 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -343,7 +349,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  34 => 
+  34 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -358,7 +364,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  36 => 
+  36 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -373,7 +379,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  37 => 
+  37 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Emplacements pour 25 000 joueurs.',
@@ -388,7 +394,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  38 => 
+  38 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slot per 25.000 giocatori.',
@@ -403,13 +409,13 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  39 => 
+  39 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espacios para 25.000 jugadores.',
     'Id' => 39,
     'Language' => 'es',
-    'Name' => 'Mundo 1 (España)',
+    'Name' => 'Mundo 1 (Espa?a)',
     'StartTime' => 1.33784640064E+12,
     'Timezone' => 2,
     'Url' => 'http://prodgame07.alliances.commandandconquer.com/39',
@@ -418,13 +424,13 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  40 => 
+  40 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Miejsca dla 25 000 graczy.',
     'Id' => 40,
     'Language' => 'pl',
-    'Name' => 'Świat 1',
+    'Name' => '?wiat 1',
     'StartTime' => 1.33784640064E+12,
     'Timezone' => 2,
     'Url' => 'http://prodgame07.alliances.commandandconquer.com/40',
@@ -433,7 +439,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  41 => 
+  41 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Ячейки для 25 000 игроков.
@@ -449,7 +455,7 @@
     'p' => 'qweqwe123',
     'u' => 'lmir1@mailinator.com',
   ),
-  42 => 
+  42 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Entradas para 25 000 jogadores.',
@@ -464,13 +470,13 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  43 => 
+  43 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => '25.000 oyuncu alır',
+    'Description' => '25.000 oyuncu al?r',
     'Id' => 43,
     'Language' => 'tr',
-    'Name' => 'Dünya 1',
+    'Name' => 'D?nya 1',
     'StartTime' => 1.33784640064E+12,
     'Timezone' => 3,
     'Url' => 'http://prodgame09.alliances.commandandconquer.com/43',
@@ -479,7 +485,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  44 => 
+  44 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots voor 25.000 spelers.',
@@ -494,10 +500,10 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  45 => 
+  45 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Espaços para 25.000 jogadores.',
+    'Description' => 'Espa?os para 25.000 jogadores.',
     'Id' => 45,
     'Language' => 'pt',
     'Name' => 'Mundo 1 Brazil',
@@ -509,10 +515,10 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  46 => 
+  46 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Slots für 25,000 Spieler.',
+    'Description' => 'Slots f?r 25,000 Spieler.',
     'Id' => 46,
     'Language' => 'de',
     'Name' => 'Welt 5',
@@ -523,8 +529,9 @@
     'y' => 32,
     'p' => 'qweqwe123',
     'u' => 'lwelt5@mailinator.com',
+    'skip' => true,
   ),
-  47 => 
+  47 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Emplacements pour 25 000 joueurs.',
@@ -539,13 +546,13 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  49 => 
+  49 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espacios para 25.000 jugadores.',
     'Id' => 49,
     'Language' => 'es',
-    'Name' => 'Mundo 2 (España)',
+    'Name' => 'Mundo 2 (Espa?a)',
     'StartTime' => 1.33942710046E+12,
     'Timezone' => 2,
     'Url' => 'http://prodgame12.alliances.commandandconquer.com/49',
@@ -554,7 +561,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  52 => 
+  52 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Ячейки для 25 000 игроков.',
@@ -569,10 +576,10 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  55 => 
+  55 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Espaços para 25.000 jogadores.',
+    'Description' => 'Espa?os para 25.000 jogadores.',
     'Id' => 55,
     'Language' => 'pt',
     'Name' => 'Mundo 2 Brazil',
@@ -584,7 +591,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  56 => 
+  56 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -599,7 +606,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  57 => 
+  57 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -614,10 +621,10 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  58 => 
+  58 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Slots für 25,000 Spieler.',
+    'Description' => 'Slots f?r 25,000 Spieler.',
     'Id' => 58,
     'Language' => 'de',
     'Name' => 'Welt 6',
@@ -628,8 +635,9 @@
     'y' => 32,
     'p' => 'qweqwe123',
     'u' => 'lwelt6@mailinator.com',
+    'skip' => true,
   ),
-  59 => 
+  59 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.#',
@@ -644,7 +652,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  60 => 
+  60 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -659,7 +667,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  61 => 
+  61 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -674,7 +682,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  62 => 
+  62 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => NULL,
@@ -689,10 +697,10 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  64 => 
+  64 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Slots für 25,000 Spieler.',
+    'Description' => 'Slots f?r 25,000 Spieler.',
     'Id' => 64,
     'Language' => 'de',
     'Name' => 'Welt 7',
@@ -704,7 +712,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  65 => 
+  65 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Emplacements pour 25 000 joueurs.',
@@ -719,7 +727,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  66 => 
+  66 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -734,7 +742,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  67 => 
+  67 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -749,10 +757,10 @@
     'u' => 'lworld29@mailinator.com',
     'p' => 'qweqwe123',
   ),
-  68 => 
+  68 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Slots für 25,000 Spieler.',
+    'Description' => 'Slots f?r 25,000 Spieler.',
     'Id' => 68,
     'Language' => 'de',
     'Name' => 'Welt 8',
@@ -764,7 +772,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  35 => 
+  35 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -779,13 +787,13 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  69 => 
+  69 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espacios para 25.000 jugadores.',
     'Id' => 69,
     'Language' => 'es',
-    'Name' => 'Mundo 3 (España)',
+    'Name' => 'Mundo 3 (Espa?a)',
     'StartTime' => 1.34217000026E+12,
     'Timezone' => 2,
     'Url' => 'http://prodgame12.alliances.commandandconquer.com/69',
@@ -794,7 +802,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  70 => 
+  70 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -809,7 +817,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  71 => 
+  71 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -824,7 +832,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  72 => 
+  72 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Emplacements pour 25 000 joueurs.',
@@ -839,13 +847,13 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  50 => 
+  50 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Miejsca dla 25 000 graczy.',
     'Id' => 50,
     'Language' => 'pl',
-    'Name' => 'Świat 2',
+    'Name' => '?wiat 2',
     'StartTime' => 1.34287200092E+12,
     'Timezone' => 2,
     'Url' => 'http://prodgame12.alliances.commandandconquer.com/50',
@@ -854,7 +862,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  73 => 
+  73 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => NULL,
@@ -869,7 +877,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  74 => 
+  74 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => NULL,
@@ -884,7 +892,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  75 => 
+  75 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => NULL,
@@ -899,10 +907,10 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  76 => 
+  76 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Slots für 25,000 Spieler.',
+    'Description' => 'Slots f?r 25,000 Spieler.',
     'Id' => 76,
     'Language' => 'de',
     'Name' => 'Welt 10 ',
@@ -914,7 +922,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  77 => 
+  77 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -929,10 +937,10 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  78 => 
+  78 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Espaços para 25.000 jogadores.',
+    'Description' => 'Espa?os para 25.000 jogadores.',
     'Id' => 78,
     'Language' => 'pt',
     'Name' => 'Mundo 3 Brazil ',
@@ -944,7 +952,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  79 => 
+  79 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -959,10 +967,10 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  80 => 
+  80 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Slots für 25,000 Spieler.',
+    'Description' => 'Slots f?r 25,000 Spieler.',
     'Id' => 80,
     'Language' => 'de',
     'Name' => 'Welt 11  ',
@@ -974,7 +982,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  81 => 
+  81 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -989,13 +997,13 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  82 => 
+  82 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espacios para 25.000 jugadores.',
     'Id' => 82,
     'Language' => 'es',
-    'Name' => 'Mundo 4 (España) ',
+    'Name' => 'Mundo 4 (Espa?a) ',
     'StartTime' => 1.3445100008E+12,
     'Timezone' => 2,
     'Url' => 'http://prodgame06.alliances.commandandconquer.com/82',
@@ -1004,13 +1012,13 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  53 => 
+  53 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => '25.000 oyuncu alır',
+    'Description' => '25.000 oyuncu al?r',
     'Id' => 53,
     'Language' => 'tr',
-    'Name' => 'Dünya 2',
+    'Name' => 'D?nya 2',
     'StartTime' => 1.34486640027E+12,
     'Timezone' => 3,
     'Url' => 'http://prodgame12.alliances.commandandconquer.com/53',
@@ -1019,7 +1027,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  83 => 
+  83 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Ячейки для 25 000 игроков.',
@@ -1034,10 +1042,10 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  84 => 
+  84 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Emplacements pour 25 000 joueurs. Règle : Boost des Oubliés',
+    'Description' => 'Emplacements pour 25 000 joueurs. R?gle : Boost des Oubli?s',
     'Id' => 84,
     'Language' => 'fr',
     'Name' => 'Monde 5 ',
@@ -1049,10 +1057,10 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  85 => 
+  85 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'Id' => 85,
     'Language' => 'de',
     'Name' => 'Welt 12   ',
@@ -1064,7 +1072,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  86 => 
+  86 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1079,7 +1087,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  87 => 
+  87 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1094,7 +1102,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  88 => 
+  88 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1109,7 +1117,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  54 => 
+  54 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots voor 25.000 spelers. Regelset: Vergeten bonus',
@@ -1124,10 +1132,10 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  99 => 
+  99 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Espaços para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos\'',
+    'Description' => 'Espa?os para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos\'',
     'Id' => 99,
     'Language' => 'br',
     'Name' => 'Mundo 4 Brazil  ',
@@ -1139,7 +1147,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  100 => 
+  100 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1154,10 +1162,10 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  101 => 
+  101 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'Id' => 101,
     'Language' => 'de',
     'Name' => 'Welt 13    ',
@@ -1169,13 +1177,13 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  102 => 
+  102 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espacios para 25.000 jugadores.',
     'Id' => 102,
     'Language' => 'es',
-    'Name' => 'Mundo 5 (España)  ',
+    'Name' => 'Mundo 5 (Espa?a)  ',
     'StartTime' => 1.34746920083E+12,
     'Timezone' => 2,
     'Url' => 'http://prodgame08.alliances.commandandconquer.com/102',
@@ -1184,13 +1192,13 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  103 => 
+  103 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Miejsca dla 25 000 graczy.',
     'Id' => 103,
     'Language' => 'pl',
-    'Name' => 'Świat 3 ',
+    'Name' => '?wiat 3 ',
     'StartTime' => 1.34746920085E+12,
     'Timezone' => 2,
     'Url' => 'http://prodgame08.alliances.commandandconquer.com/103',
@@ -1199,7 +1207,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  104 => 
+  104 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1214,7 +1222,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  51 => 
+  51 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Entradas para 25 000 jogadores.',
@@ -1229,10 +1237,10 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  105 => 
+  105 =>
   array (
     'AcceptNewPlayer' => true,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'Id' => 105,
     'Language' => 'de',
     'Name' => 'Welt 14     ',
@@ -1244,7 +1252,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  106 => 
+  106 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1259,7 +1267,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  107 => 
+  107 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Ячейки для 25 000 игроков.',
@@ -1274,7 +1282,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  108 => 
+  108 =>
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1289,11 +1297,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  109 => 
+  109 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 372798,
-    'Description' => 'Emplacements pour 25 000 joueurs. Règle : Boost des Oubliés',
+    'Description' => 'Emplacements pour 25 000 joueurs. R?gle : Boost des Oubli?s',
     'Id' => 109,
     'Language' => 'fr',
     'Name' => 'Monde 6  ',
@@ -1305,11 +1313,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  110 => 
+  110 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 372798,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'Id' => 110,
     'Language' => 'de',
     'Name' => 'Welt 15      ',
@@ -1321,7 +1329,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  121 => 
+  121 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 372567,
@@ -1337,7 +1345,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  122 => 
+  122 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 372798,
@@ -1353,11 +1361,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  123 => 
+  123 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'Id' => 123,
     'Language' => 'de',
     'Name' => 'Welt 16       ',
@@ -1369,7 +1377,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  124 => 
+  124 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1385,7 +1393,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  125 => 
+  125 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1401,14 +1409,14 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  126 => 
+  126 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
     'Description' => 'Espacios para 25.000 jugadores.',
     'Id' => 126,
     'Language' => 'es',
-    'Name' => 'Mundo 6 (España)   ',
+    'Name' => 'Mundo 6 (Espa?a)   ',
     'StartTime' => 1.34970120019E+12,
     'Timezone' => 2,
     'Url' => 'http://prodgame13.alliances.commandandconquer.com/126',
@@ -1417,7 +1425,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  127 => 
+  127 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1434,7 +1442,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  128 => 
+  128 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1451,7 +1459,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  129 => 
+  129 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1459,7 +1467,7 @@
     'Id' => 129,
     'Language' => 'pl',
     'MaxPlayers' => 25000,
-    'Name' => 'Świat 4  ',
+    'Name' => '?wiat 4  ',
     'StartTime' => 1.3509198005E+12,
     'Timezone' => 2,
     'Url' => 'http://prodgame13.alliances.commandandconquer.com/129',
@@ -1468,11 +1476,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  130 => 
+  130 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'Id' => 130,
     'Language' => 'de',
     'MaxPlayers' => 25000,
@@ -1485,7 +1493,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  131 => 
+  131 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1502,7 +1510,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  132 => 
+  132 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 376345,
@@ -1519,7 +1527,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  48 => 
+  48 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1536,7 +1544,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  133 => 
+  133 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1553,11 +1561,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  134 => 
+  134 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
-    'Description' => 'Emplacements pour 25 000 joueurs. Règle : Boost des Oubliés',
+    'Description' => 'Emplacements pour 25 000 joueurs. R?gle : Boost des Oubli?s',
     'Id' => 134,
     'Language' => 'fr',
     'MaxPlayers' => 25000,
@@ -1570,7 +1578,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  136 => 
+  136 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1587,11 +1595,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  137 => 
+  137 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'Id' => 137,
     'Language' => 'de',
     'MaxPlayers' => 25000,
@@ -1604,7 +1612,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  138 => 
+  138 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1621,7 +1629,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  139 => 
+  139 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1629,7 +1637,7 @@
     'Id' => 139,
     'Language' => 'es',
     'MaxPlayers' => 25000,
-    'Name' => 'Mundo 7 (España)    ',
+    'Name' => 'Mundo 7 (Espa?a)    ',
     'StartTime' => 1.35186120039E+12,
     'Timezone' => 1,
     'Url' => 'http://prodgame07.alliances.commandandconquer.com/139',
@@ -1638,7 +1646,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  111 => 
+  111 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1656,16 +1664,16 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  112 => 
+  112 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
-    'Description' => 'Platser för 25.000 spelare. Regler: Forgotten-förbättring.',
+    'Description' => 'Platser f?r 25.000 spelare. Regler: Forgotten-f?rb?ttring.',
     'ExtendedLanguage' => 'sv_se',
     'Id' => 112,
     'Language' => 'se',
     'MaxPlayers' => 25000,
-    'Name' => 'Världen 1',
+    'Name' => 'V?rlden 1',
     'StartTime' => 1.35229680072E+12,
     'Timezone' => 1,
     'Url' => 'http://prodgame13.alliances.commandandconquer.com/112',
@@ -1674,11 +1682,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  113 => 
+  113 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
-    'Description' => 'Miesto pre 25 000 hráčov. Sada pravidiel: Vzostup Zabudnutých.',
+    'Description' => 'Miesto pre 25 000 hr??ov. Sada pravidiel: Vzostup Zabudnut?ch.',
     'ExtendedLanguage' => 'sk_sk',
     'Id' => 113,
     'Language' => 'sk',
@@ -1692,11 +1700,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  114 => 
+  114 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
-    'Description' => 'Sloturi pentru 25000 de jucători. Set de reguli: Amplificare Uitaţi.',
+    'Description' => 'Sloturi pentru 25000 de juc?tori. Set de reguli: Amplificare Uita?i.',
     'ExtendedLanguage' => 'ro_ro',
     'Id' => 114,
     'Language' => 'ro',
@@ -1710,11 +1718,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  115 => 
+  115 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
-    'Description' => 'Plasser for 25 000 spillere. Regel satt: Forglemt-økning.',
+    'Description' => 'Plasser for 25 000 spillere. Regel satt: Forglemt-?kning.',
     'ExtendedLanguage' => 'nb_no',
     'Id' => 115,
     'Language' => 'no',
@@ -1728,16 +1736,16 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  116 => 
+  116 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
-    'Description' => 'Helyek 25 000 játékosnak. Szabálykészlet: Elfeledett löket.',
+    'Description' => 'Helyek 25 000 j?t?kosnak. Szab?lyk?szlet: Elfeledett l?ket.',
     'ExtendedLanguage' => 'hu_hu',
     'Id' => 116,
     'Language' => 'hu',
     'MaxPlayers' => 25000,
-    'Name' => 'Világ 1',
+    'Name' => 'Vil?g 1',
     'StartTime' => 1.35229680072E+12,
     'Timezone' => 1,
     'Url' => 'http://prodgame14.alliances.commandandconquer.com/116',
@@ -1746,11 +1754,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  117 => 
+  117 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
-    'Description' => 'Paikkoja 25 000 pelaajalle. Sääntöjoukko: Unohdettujen tehoste.',
+    'Description' => 'Paikkoja 25 000 pelaajalle. S??nt?joukko: Unohdettujen tehoste.',
     'ExtendedLanguage' => 'fi_fi',
     'Id' => 117,
     'Language' => 'fi',
@@ -1764,11 +1772,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  118 => 
+  118 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
-    'Description' => 'Pladser til 25.000 spillere. Regelsæt: Glemt boost.',
+    'Description' => 'Pladser til 25.000 spillere. Regels?t: Glemt boost.',
     'ExtendedLanguage' => 'da_dk',
     'Id' => 118,
     'Language' => 'da',
@@ -1782,16 +1790,16 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  119 => 
+  119 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
-    'Description' => 'Místo pro 25 000 hráčů.	Sada pravidel: Vylepšení Zapomenutých.',
+    'Description' => 'M?sto pro 25 000 hr???.	Sada pravidel: Vylep?en? Zapomenut?ch.',
     'ExtendedLanguage' => 'cs_cz',
     'Id' => 119,
     'Language' => 'cz',
     'MaxPlayers' => 25000,
-    'Name' => 'Svět 1',
+    'Name' => 'Sv?t 1',
     'StartTime' => 1.35229680072E+12,
     'Timezone' => 1,
     'Url' => 'http://prodgame14.alliances.commandandconquer.com/119',
@@ -1800,7 +1808,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  140 => 
+  140 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1818,7 +1826,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  141 => 
+  141 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1836,7 +1844,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  142 => 
+  142 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1854,7 +1862,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  143 => 
+  143 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1872,11 +1880,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  144 => 
+  144 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_de',
     'Id' => 144,
     'Language' => 'de',
@@ -1890,7 +1898,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  145 => 
+  145 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1908,11 +1916,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  146 => 
+  146 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_de',
     'Id' => 146,
     'Language' => 'de',
@@ -1926,7 +1934,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  147 => 
+  147 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1944,16 +1952,16 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  135 => 
+  135 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
-    'Description' => '25.000 oyuncu alır. Konulan kural: Unutulmuş artış öğesi.',
+    'Description' => '25.000 oyuncu al?r. Konulan kural: Unutulmu? art?? ??esi.',
     'ExtendedLanguage' => 'tr_tr',
     'Id' => 135,
     'Language' => 'tr',
     'MaxPlayers' => 25000,
-    'Name' => 'Dünya 3 ',
+    'Name' => 'D?nya 3 ',
     'StartTime' => 1.35417960086E+12,
     'Timezone' => 2,
     'Url' => 'http://prodgame13.alliances.commandandconquer.com/135',
@@ -1962,7 +1970,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  148 => 
+  148 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1980,7 +1988,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  149 => 
+  149 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1989,7 +1997,7 @@
     'Id' => 149,
     'Language' => 'es',
     'MaxPlayers' => 25000,
-    'Name' => 'Mundo 8 (España)     ',
+    'Name' => 'Mundo 8 (Espa?a)     ',
     'StartTime' => 1.35417960087E+12,
     'Timezone' => 1,
     'Url' => 'http://prodgame14.alliances.commandandconquer.com/149',
@@ -1998,7 +2006,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  150 => 
+  150 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -2007,7 +2015,7 @@
     'Id' => 150,
     'Language' => 'pl',
     'MaxPlayers' => 25000,
-    'Name' => 'Świat 5   ',
+    'Name' => '?wiat 5   ',
     'StartTime' => 1.35456480065E+12,
     'Timezone' => 1,
     'Url' => 'http://prodgame14.alliances.commandandconquer.com/150',
@@ -2016,7 +2024,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  151 => 
+  151 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -2034,7 +2042,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  153 => 
+  153 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -2052,11 +2060,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  152 => 
+  152 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 383327,
-    'Description' => 'Emplacements pour 25 000 joueurs. Règle : Boost des Oubliés',
+    'Description' => 'Emplacements pour 25 000 joueurs. R?gle : Boost des Oubli?s',
     'ExtendedLanguage' => 'fr_fr',
     'Id' => 152,
     'Language' => 'fr',
@@ -2070,7 +2078,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  154 => 
+  154 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 383327,
@@ -2088,7 +2096,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  155 => 
+  155 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 383327,
@@ -2106,11 +2114,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  156 => 
+  156 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 383327,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_de',
     'Id' => 156,
     'Language' => 'de',
@@ -2124,11 +2132,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  157 => 
+  157 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 383327,
-    'Description' => 'Espaços para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos\'',
+    'Description' => 'Espa?os para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos\'',
     'ExtendedLanguage' => 'pt_br',
     'Id' => 157,
     'Language' => 'br',
@@ -2142,7 +2150,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  159 => 
+  159 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2160,7 +2168,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  160 => 
+  160 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2178,7 +2186,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  162 => 
+  162 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2196,7 +2204,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  163 => 
+  163 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2205,7 +2213,7 @@
     'Id' => 163,
     'Language' => 'es',
     'MaxPlayers' => 25000,
-    'Name' => 'Mundo 9 (España)      ',
+    'Name' => 'Mundo 9 (Espa?a)      ',
     'StartTime' => 1.35617040077E+12,
     'Timezone' => 1,
     'Url' => 'http://prodgame07.alliances.commandandconquer.com/163',
@@ -2214,11 +2222,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  158 => 
+  158 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_de',
     'Id' => 158,
     'Language' => 'de',
@@ -2232,7 +2240,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  161 => 
+  161 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2250,7 +2258,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  164 => 
+  164 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2268,7 +2276,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  165 => 
+  165 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2285,11 +2293,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  166 => 
+  166 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_DE',
     'Id' => 166,
     'MaxPlayers' => 25000,
@@ -2302,7 +2310,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  167 => 
+  167 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2310,7 +2318,7 @@
     'ExtendedLanguage' => 'pl_PL',
     'Id' => 167,
     'MaxPlayers' => 25000,
-    'Name' => 'Świat 6    ',
+    'Name' => '?wiat 6    ',
     'StartTime' => 1.35763920064E+12,
     'Timezone' => 1,
     'Url' => 'http://prodgame14.alliances.commandandconquer.com/167',
@@ -2319,7 +2327,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  168 => 
+  168 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2336,7 +2344,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  169 => 
+  169 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2344,7 +2352,7 @@
     'ExtendedLanguage' => 'es_ES',
     'Id' => 169,
     'MaxPlayers' => 25000,
-    'Name' => 'Mundo 10 (España)       ',
+    'Name' => 'Mundo 10 (Espa?a)       ',
     'StartTime' => 1.35851760059E+12,
     'Timezone' => 1,
     'Url' => 'http://prodgame12.alliances.commandandconquer.com/169',
@@ -2353,11 +2361,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  170 => 
+  170 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
-    'Description' => 'Espaços para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos\'',
+    'Description' => 'Espa?os para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos\'',
     'ExtendedLanguage' => 'pt_BR',
     'Id' => 170,
     'MaxPlayers' => 25000,
@@ -2370,11 +2378,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  171 => 
+  171 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_DE',
     'Id' => 171,
     'MaxPlayers' => 25000,
@@ -2387,7 +2395,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  172 => 
+  172 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2404,11 +2412,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  173 => 
+  173 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
-    'Description' => 'Emplacements pour 25 000 joueurs. Règle : Boost des Oubliés',
+    'Description' => 'Emplacements pour 25 000 joueurs. R?gle : Boost des Oubli?s',
     'ExtendedLanguage' => 'fr_FR',
     'Id' => 173,
     'MaxPlayers' => 25000,
@@ -2421,7 +2429,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  174 => 
+  174 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2438,7 +2446,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  175 => 
+  175 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2455,7 +2463,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  176 => 
+  176 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 391606,
@@ -2473,11 +2481,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  177 => 
+  177 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 391606,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_DE',
     'Id' => 177,
     'MaxPlayers' => 25000,
@@ -2491,7 +2499,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  178 => 
+  178 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 391606,
@@ -2509,11 +2517,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  179 => 
+  179 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 391606,
-    'Description' => 'Espaços para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos\'',
+    'Description' => 'Espa?os para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos\'',
     'ExtendedLanguage' => 'pt_BR',
     'Id' => 179,
     'MaxPlayers' => 25000,
@@ -2527,7 +2535,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  180 => 
+  180 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 391606,
@@ -2545,7 +2553,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  182 => 
+  182 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2553,7 +2561,7 @@
     'ExtendedLanguage' => 'pl_PL',
     'Id' => 182,
     'MaxPlayers' => 25000,
-    'Name' => 'Świat 7     ',
+    'Name' => '?wiat 7     ',
     'Recommended' => true,
     'StartTime' => 1.3620420002E+12,
     'Timezone' => 1,
@@ -2563,7 +2571,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  183 => 
+  183 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2581,11 +2589,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  184 => 
+  184 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_DE',
     'Id' => 184,
     'MaxPlayers' => 25000,
@@ -2599,7 +2607,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  185 => 
+  185 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2607,7 +2615,7 @@
     'ExtendedLanguage' => 'es_ES',
     'Id' => 185,
     'MaxPlayers' => 25000,
-    'Name' => 'Mundo 11 (España)        ',
+    'Name' => 'Mundo 11 (Espa?a)        ',
     'Recommended' => true,
     'StartTime' => 1.36256040098E+12,
     'Timezone' => 1,
@@ -2617,7 +2625,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  186 => 
+  186 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2635,15 +2643,15 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  187 => 
+  187 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
-    'Description' => 'Místo pro 25 000 hráčů.	Sada pravidel: Vylepšení Zapomenutých.',
+    'Description' => 'M?sto pro 25 000 hr???.	Sada pravidel: Vylep?en? Zapomenut?ch.',
     'ExtendedLanguage' => 'cs_CZ',
     'Id' => 187,
     'MaxPlayers' => 25000,
-    'Name' => 'Svět 2 ',
+    'Name' => 'Sv?t 2 ',
     'Recommended' => true,
     'StartTime' => 1.36302480066E+12,
     'Timezone' => 1,
@@ -2653,7 +2661,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  188 => 
+  188 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2671,11 +2679,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  189 => 
+  189 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
-    'Description' => 'Emplacements pour 25 000 joueurs. Règle : Boost des Oubliés',
+    'Description' => 'Emplacements pour 25 000 joueurs. R?gle : Boost des Oubli?s',
     'ExtendedLanguage' => 'fr_FR',
     'Id' => 189,
     'MaxPlayers' => 25000,
@@ -2689,7 +2697,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  190 => 
+  190 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2707,11 +2715,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  192 => 
+  192 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_DE',
     'Id' => 192,
     'MaxPlayers' => 25000,
@@ -2725,7 +2733,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  120 => 
+  120 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 396907,
@@ -2733,7 +2741,7 @@
     'ExtendedLanguage' => 'ar_AE',
     'Id' => 120,
     'MaxPlayers' => 25000,
-    'Name' => '1 العالم',
+    'Name' => '1 ??????',
     'Recommended' => true,
     'StartTime' => 1.36434600049E+12,
     'Timezone' => 2,
@@ -2743,7 +2751,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  191 => 
+  191 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 396907,
@@ -2761,7 +2769,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  193 => 
+  193 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 396907,
@@ -2769,7 +2777,7 @@
     'ExtendedLanguage' => 'es_ES',
     'Id' => 193,
     'MaxPlayers' => 25000,
-    'Name' => 'Mundo 12 (España)         ',
+    'Name' => 'Mundo 12 (Espa?a)         ',
     'Recommended' => true,
     'StartTime' => 1.3655115E+12,
     'Timezone' => 2,
@@ -2779,11 +2787,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  194 => 
+  194 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 396907,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_DE',
     'Id' => 194,
     'MaxPlayers' => 25000,
@@ -2797,7 +2805,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  195 => 
+  195 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 396907,
@@ -2815,7 +2823,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  196 => 
+  196 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2833,7 +2841,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  197 => 
+  197 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2851,15 +2859,15 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  198 => 
+  198 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
-    'Description' => '25.000 oyuncu alır. Konulan kural: Unutulmuş artış öğesi.',
+    'Description' => '25.000 oyuncu al?r. Konulan kural: Unutulmu? art?? ??esi.',
     'ExtendedLanguage' => 'tr_TR',
     'Id' => 198,
     'MaxPlayers' => 25000,
-    'Name' => 'Dünya 4  ',
+    'Name' => 'D?nya 4  ',
     'Recommended' => true,
     'StartTime' => 1.36756440016E+12,
     'Timezone' => 3,
@@ -2869,11 +2877,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  199 => 
+  199 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
-    'Description' => 'Espaços para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos\'',
+    'Description' => 'Espa?os para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos\'',
     'ExtendedLanguage' => 'pt_BR',
     'Id' => 199,
     'MaxPlayers' => 25000,
@@ -2887,7 +2895,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  200 => 
+  200 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2905,7 +2913,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  201 => 
+  201 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2923,7 +2931,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  202 => 
+  202 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2941,11 +2949,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  203 => 
+  203 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_DE',
     'Id' => 203,
     'MaxPlayers' => 25000,
@@ -2959,7 +2967,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  204 => 
+  204 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2967,7 +2975,7 @@
     'ExtendedLanguage' => 'es_ES',
     'Id' => 204,
     'MaxPlayers' => 25000,
-    'Name' => 'Mundo 13 (España)          ',
+    'Name' => 'Mundo 13 (Espa?a)          ',
     'Recommended' => true,
     'StartTime' => 1.368342E+12,
     'Timezone' => 2,
@@ -2977,11 +2985,11 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  205 => 
+  205 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
-    'Description' => 'Emplacements pour 25 000 joueurs. Règle : Boost des Oubliés',
+    'Description' => 'Emplacements pour 25 000 joueurs. R?gle : Boost des Oubli?s',
     'ExtendedLanguage' => 'fr_FR',
     'Id' => 205,
     'MaxPlayers' => 25000,
@@ -2995,7 +3003,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  206 => 
+  206 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -3003,7 +3011,7 @@
     'ExtendedLanguage' => 'pl_PL',
     'Id' => 206,
     'MaxPlayers' => 25000,
-    'Name' => 'Świat 8      ',
+    'Name' => '?wiat 8      ',
     'Recommended' => true,
     'StartTime' => 1.3683420274E+12,
     'Timezone' => 2,
@@ -3013,7 +3021,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  207 => 
+  207 =>
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -3031,7 +3039,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  220 => 
+  220 =>
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3050,7 +3058,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  222 => 
+  222 =>
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3069,12 +3077,12 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  223 => 
+  223 =>
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
     'Changelist' => 401440,
-    'Description' => 'Slots für 25,000 Spieler. Regelset: Vergessenen-Boost',
+    'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
     'ExtendedLanguage' => 'de_DE',
     'Id' => 223,
     'MaxPlayers' => 25000,
@@ -3088,7 +3096,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  224 => 
+  224 =>
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3107,12 +3115,12 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  225 => 
+  225 =>
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
     'Changelist' => 407377,
-    'Description' => 'Slots für 30,000 Spieler. Regelset: Vergessenen-Boost. Neue Wirtschafts-Balance',
+    'Description' => 'Slots f?r 30,000 Spieler. Regelset: Vergessenen-Boost. Neue Wirtschafts-Balance',
     'ExtendedLanguage' => 'de_DE',
     'Id' => 225,
     'MaxPlayers' => 30000,
@@ -3126,7 +3134,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  226 => 
+  226 =>
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3135,7 +3143,7 @@
     'ExtendedLanguage' => 'es_ES',
     'Id' => 226,
     'MaxPlayers' => 30000,
-    'Name' => 'Mundo 14 (España)           ',
+    'Name' => 'Mundo 14 (Espa?a)           ',
     'Recommended' => true,
     'StartTime' => 1.37266280118E+12,
     'Timezone' => 2,
@@ -3145,7 +3153,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  227 => 
+  227 =>
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3164,7 +3172,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  228 => 
+  228 =>
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3183,7 +3191,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  229 => 
+  229 =>
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3200,6 +3208,435 @@
     'version' => 2,
     'x' => 35,
     'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  230 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409508,
+    'Description' => 'Slots for 30,000 players. Rule set: Forgotten boost. New economy balance',
+    'ExtendedLanguage' => 'en_US',
+    'Id' => 230,
+    'MaxPlayers' => 30000,
+    'Name' => 'World 81 (Europe)                     ',
+    'Recommended' => true,
+    'StartTime' => 1.37586960067E+12,
+    'Timezone' => 2,
+    'Url' => 'http://prodgame11.alliances.commandandconquer.com/230',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  231 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 408752,
+    'Description' => 'Espa?os para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos',
+    'ExtendedLanguage' => 'pt_BR',
+    'Id' => 231,
+    'MaxPlayers' => 25000,
+    'Name' => 'Mundo 9 Brazil       ',
+    'Recommended' => true,
+    'StartTime' => 1.37586960067E+12,
+    'Timezone' => -3,
+    'Url' => 'http://prodgame09.alliances.commandandconquer.com/231',
+    'x' => 32,
+    'y' => 32,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  232 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 408752,
+    'Description' => 'J?t?kos kapacit?s: 25 000 f?. Szab?lyk?szlet: Elfeledett l?ket.',
+    'ExtendedLanguage' => 'hu_HU',
+    'Id' => 232,
+    'MaxPlayers' => 25000,
+    'Name' => 'Vil?g 2 ',
+    'Recommended' => true,
+    'StartTime' => 1.37586960067E+12,
+    'Timezone' => 2,
+    'Url' => 'http://prodgame12.alliances.commandandconquer.com/232',
+    'x' => 32,
+    'y' => 32,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  233 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 408752,
+    'Description' => 'Emplacements pour 25 000 joueurs. R?gle : Boost des Oubli?s',
+    'ExtendedLanguage' => 'fr_FR',
+    'Id' => 233,
+    'MaxPlayers' => 25000,
+    'Name' => 'Monde 12        ',
+    'Recommended' => true,
+    'StartTime' => 1.37586960067E+12,
+    'Timezone' => 2,
+    'Url' => 'http://prodgame13.alliances.commandandconquer.com/233',
+    'x' => 32,
+    'y' => 32,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  234 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409626,
+    'Description' => 'Ячейки для 25 000 игроков. Задано правило: усиление Забытых. Новая экономика баланса.',
+    'ExtendedLanguage' => 'ru_RU',
+    'Id' => 234,
+    'MaxPlayers' => 25000,
+    'Name' => 'Мир 17 ',
+    'Recommended' => true,
+    'StartTime' => 1.37810880028E+12,
+    'Timezone' => 4,
+    'Url' => 'http://prodgame14.alliances.commandandconquer.com/234',
+    'x' => 32,
+    'y' => 32,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  235 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409626,
+    'Description' => 'Slots for 30,000 players. Rule set: Forgotten boost. New economy balance',
+    'ExtendedLanguage' => 'en_US',
+    'Id' => 235,
+    'MaxPlayers' => 30000,
+    'Name' => 'World 82 (Europe)                      ',
+    'Recommended' => true,
+    'StartTime' => 1.37767680086E+12,
+    'Timezone' => 2,
+    'Url' => 'http://prodgame02.alliances.commandandconquer.com/235',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  236 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409626,
+    'Description' => 'Slots f?r 30,000 Spieler. Regelset: Vergessenen-Boost. Neue Wirtschafts-Balance',
+    'ExtendedLanguage' => 'de_DE',
+    'Id' => 236,
+    'MaxPlayers' => 30000,
+    'Name' => 'Welt 32                       ',
+    'Recommended' => true,
+    'StartTime' => 1.37767680086E+12,
+    'Timezone' => 2,
+    'Url' => 'http://prodgame07.alliances.commandandconquer.com/236',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  237 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409626,
+    'Description' => 'Slots for 30,000 players. Rule set: Forgotten boost. New economy balance',
+    'ExtendedLanguage' => 'en_US',
+    'Id' => 237,
+    'MaxPlayers' => 30000,
+    'Name' => 'World 83 (USA East Coast)                   ',
+    'Recommended' => true,
+    'StartTime' => 1.37908081829E+12,
+    'Timezone' => -4,
+    'Url' => 'http://prodgame04.alliances.commandandconquer.com/237',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  238 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409626,
+    'Description' => 'Miejsca dla 25 000 graczy. Zestaw zasad: wzmocnienie Zapomnianych.',
+    'ExtendedLanguage' => 'pl_PL',
+    'Id' => 238,
+    'MaxPlayers' => 25000,
+    'Name' => '?wiat 9       ',
+    'Recommended' => true,
+    'StartTime' => 1.37984400114E+12,
+    'Timezone' => 2,
+    'Url' => 'http://prodgame08.alliances.commandandconquer.com/238',
+    'x' => 32,
+    'y' => 32,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  239 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409626,
+    'Description' => 'Espacio para 30.000 jugadores. Reglas: Olvidados potenciados.',
+    'ExtendedLanguage' => 'es_ES',
+    'Id' => 239,
+    'MaxPlayers' => 30000,
+    'Name' => 'Mundo 15 (Espa?a)            ',
+    'Recommended' => true,
+    'StartTime' => 1.37984401544E+12,
+    'Timezone' => 2,
+    'Url' => 'http://prodgame08.alliances.commandandconquer.com/239',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  240 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409850,
+    'Description' => 'Slots for 30,000 players. Rule set: Forgotten boost. New economy balance',
+    'ExtendedLanguage' => 'en_US',
+    'Id' => 240,
+    'MaxPlayers' => 30000,
+    'Name' => 'World 84 (Europe)                       ',
+    'Recommended' => true,
+    'StartTime' => 1.38061445055E+12,
+    'Timezone' => 2,
+    'Url' => 'http://prodgame10.alliances.commandandconquer.com/240',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  241 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409850,
+    'Description' => '25.000 oyuncu al?r. Konulan kural: Unutulmu? art?? ??esi.',
+    'ExtendedLanguage' => 'tr_TR',
+    'Id' => 241,
+    'MaxPlayers' => 25000,
+    'Name' => 'D?nya 5   ',
+    'Recommended' => true,
+    'StartTime' => 1.38234241714E+12,
+    'Timezone' => 2,
+    'Url' => 'http://prodgame07.alliances.commandandconquer.com/241',
+    'x' => 32,
+    'y' => 32,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  242 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409850,
+    'Description' => 'M?sto pro 25 000 hr???. Sada pravidel: Vylep?en? Zapomenut?ch.',
+    'ExtendedLanguage' => 'cs_CZ',
+    'Id' => 242,
+    'MaxPlayers' => 25000,
+    'Name' => 'Sv?t 3  ',
+    'Recommended' => true,
+    'StartTime' => 1.38234242104E+12,
+    'Timezone' => 1,
+    'Url' => 'http://prodgame06.alliances.commandandconquer.com/242',
+    'x' => 32,
+    'y' => 32,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  244 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409850,
+    'Description' => 'Slots for 30,000 players. Rule set: Forgotten boost. New economy balance',
+    'ExtendedLanguage' => 'en_US',
+    'Id' => 244,
+    'MaxPlayers' => 30000,
+    'Name' => 'World 85 (Europe)                        ',
+    'Recommended' => true,
+    'StartTime' => 1.38363840805E+12,
+    'Timezone' => 1,
+    'Url' => 'http://prodgame10.alliances.commandandconquer.com/244',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  245 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 409850,
+    'Description' => 'Slots f?r 30,000 Spieler. Regelset: Vergessenen-Boost. Neue Wirtschafts-Balance',
+    'ExtendedLanguage' => 'de_DE',
+    'Id' => 245,
+    'MaxPlayers' => 30000,
+    'Name' => 'Welt 33                        ',
+    'Recommended' => true,
+    'StartTime' => 1.38383280046E+12,
+    'Timezone' => 1,
+    'Url' => 'http://prodgame16.alliances.commandandconquer.com/245',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  246 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 410325,
+    'Description' => 'Slots for 30,000 players. Rule set: Forgotten boost. New economy balance',
+    'ExtendedLanguage' => 'en_US',
+    'Id' => 246,
+    'MaxPlayers' => 30000,
+    'Name' => 'World 86 (USA East Coast)                   ',
+    'Recommended' => true,
+    'StartTime' => 1.38537662482E+12,
+    'Timezone' => -5,
+    'Url' => 'http://prodgame10.alliances.commandandconquer.com/246',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  247 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 410325,
+    'Description' => 'Slots for 30,000 players. Rule set: Forgotten boost. New economy balance',
+    'ExtendedLanguage' => 'en_US',
+    'Id' => 247,
+    'MaxPlayers' => 30000,
+    'Name' => 'World 87 (Europe)                         ',
+    'Recommended' => true,
+    'StartTime' => 1.38571563249E+12,
+    'Timezone' => 1,
+    'Url' => 'http://prodgame10.alliances.commandandconquer.com/247',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  248 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 410325,
+    'Description' => 'Slots for 30,000 players. Rule set: Forgotten boost. New economy balance',
+    'ExtendedLanguage' => 'en_US',
+    'Id' => 248,
+    'MaxPlayers' => 30000,
+    'Name' => 'World 88 (USA West Coast)                  ',
+    'Recommended' => true,
+    'StartTime' => 1.38538800416E+12,
+    'Timezone' => -8,
+    'Url' => 'http://prodgame03.alliances.commandandconquer.com/248',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  253 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 410325,
+    'Description' => 'World Championship world - Elite Commanders only',
+    'ExtendedLanguage' => 'en_US',
+    'Id' => 253,
+    'MaxPlayers' => 5000,
+    'Name' => 'World Championship     ',
+    'Recommended' => true,
+    'StartTime' => 1.38718444276E+12,
+    'Timezone' => 1,
+    'Url' => 'http://prodgame04.alliances.commandandconquer.com/253',
+    'x' => 13,
+    'y' => 13,
+    'u' => 'juergen.albert@web.de',
+    'p' => 'Renndackel1967',
+  ),
+  250 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 410325,
+    'Description' => 'Emplacements pour 25 000 joueurs. R?gle : Boost des Oubli?s',
+    'ExtendedLanguage' => 'fr_FR',
+    'Id' => 250,
+    'MaxPlayers' => 25000,
+    'Name' => 'Monde 13         ',
+    'Recommended' => true,
+    'StartTime' => 1.38727441564E+12,
+    'Timezone' => 1,
+    'Url' => 'http://prodgame06.alliances.commandandconquer.com/250',
+    'x' => 32,
+    'y' => 32,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  251 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 410325,
+    'Description' => 'Ячейки для 25 000 игроков. Задано правило: усиление Забытых. Новая экономика баланса.',
+    'ExtendedLanguage' => 'ru_RU',
+    'Id' => 251,
+    'MaxPlayers' => 25000,
+    'Name' => 'Мир 18  ',
+    'Recommended' => true,
+    'StartTime' => 1.38727440043E+12,
+    'Timezone' => 4,
+    'Url' => 'http://prodgame14.alliances.commandandconquer.com/251',
+    'x' => 32,
+    'y' => 32,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  252 =>
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 410325,
+    'Description' => 'Espa?os para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos',
+    'ExtendedLanguage' => 'pt_BR',
+    'Id' => 252,
+    'MaxPlayers' => 25000,
+    'Name' => 'Mundo 10 Brazil        ',
+    'Recommended' => true,
+    'StartTime' => 1.38727444303E+12,
+    'Timezone' => -3,
+    'Url' => 'http://prodgame14.alliances.commandandconquer.com/252',
+    'x' => 32,
+    'y' => 32,
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),

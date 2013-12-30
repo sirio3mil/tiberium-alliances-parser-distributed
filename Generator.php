@@ -22,7 +22,7 @@ class Generator
         if (sizeof($this->keys) == 0) {
             $this->keys = array_keys($this->servers);
         }
-        while (!is_numeric($id = array_shift($this->keys))) {
+        while (!is_numeric($id = array_shift($this->keys)) || isset($this->servers[$id]['skip'])) {
         }
         $server = $this->servers[$id];
         $session = $this->getSession($server["u"]);
