@@ -25,7 +25,7 @@ class Generator
         while (!is_numeric($id = array_shift($this->keys)) || isset($this->servers[$id]['skip'])) {
         }
         $server = $this->servers[$id];
-        $session = $this->getSession($server["u"]);
+        $session = $this->getSession($server["u"], $server["p"]);
         if ($session) {
             $server["session"] = $session;
             return $server;
@@ -33,11 +33,11 @@ class Generator
         return false;
     }
 
-    private function getSession($username)
+    private function getSession($username, $password)
     {
         if (!isset($this->sessions[$username])) {
             $this->sessions[$username] = array(
-                "auth" => new CCAuth($username, "qweqwe123"),
+                "auth" => new CCAuth($username, $password),
                 "forceReload" => true
             );
         }
