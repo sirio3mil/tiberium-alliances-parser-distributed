@@ -1,19 +1,19 @@
 <?php return array (
-  'util' =>
+  'util' => 
   array (
     'u' => 'lutil@mailinator.com',
     'p' => 'qweqwe123',
     'x' => 32,
     'y' => 32,
   ),
-  'limitium' =>
+  'limitium' => 
   array (
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
     'x' => 32,
     'y' => 32,
   ),
-  10 =>
+  10 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => '1st Closed Beta server. Slots for 25,000 players.',
@@ -28,7 +28,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  11 =>
+  11 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => '2nd Closed Beta server. Slots for 50,000 players.',
@@ -43,7 +43,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  12 =>
+  12 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => '3rd Closed Beta server. Slots for 25,000 players.',
@@ -58,7 +58,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  13 =>
+  13 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -73,7 +73,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  14 =>
+  14 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -88,7 +88,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  15 =>
+  15 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots f?r 25,000 Spieler.',
@@ -103,7 +103,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  16 =>
+  16 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots f?r 25,000 Spieler.',
@@ -118,7 +118,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  17 =>
+  17 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -133,7 +133,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  18 =>
+  18 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -148,7 +148,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  19 =>
+  19 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots f?r 25,000 Spieler.',
@@ -164,7 +164,7 @@
     'u' => 'lwelt3@mailinator.com',
     'skip' => true,
   ),
-  20 =>
+  20 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -179,7 +179,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  21 =>
+  21 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -194,7 +194,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  24 =>
+  24 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -209,7 +209,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  25 =>
+  25 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -225,7 +225,7 @@
     'u' => 'lworld11@mailinator.com',
     'skip' => true,
   ),
-  26 =>
+  26 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots f?r 25,000 Spieler.',
@@ -241,7 +241,7 @@
     'u' => 'lwelt4@mailinator.com',
     'skip' => true,
   ),
-  27 =>
+  27 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -257,7 +257,7 @@
     'u' => 'lworld12@mailinator.com',
     'skip' => true,
   ),
-  28 =>
+  28 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -271,9 +271,8 @@
     'y' => 32,
     'p' => 'qweqwe123',
     'u' => 'lworld13@mailinator.com',
-    'skip' => true,
   ),
-  29 =>
+  29 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -289,7 +288,7 @@
     'u' => 'lworld15@mailinator.com',
     'skip' => true,
   ),
-  30 =>
+  30 => 
   array (
     'AcceptNewPlayer' => false,
     'Description' => 'Slots for 25,000 players.',
@@ -304,7 +303,7 @@
     'p' => 'qweqwe123',
     'u' => 'lworld14@mailinator.com',
   ),
-  31 =>
+  31 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -319,7 +318,7 @@
     'p' => 'qweqwe123',
     'u' => 'lworld16@mailinator.com',
   ),
-  32 =>
+  32 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -334,7 +333,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  33 =>
+  33 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -349,7 +348,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  34 =>
+  34 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -364,7 +363,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  36 =>
+  36 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -379,7 +378,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  37 =>
+  37 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Emplacements pour 25 000 joueurs.',
@@ -394,7 +393,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  38 =>
+  38 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slot per 25.000 giocatori.',
@@ -409,7 +408,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  39 =>
+  39 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espacios para 25.000 jugadores.',
@@ -424,7 +423,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  40 =>
+  40 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Miejsca dla 25 000 graczy.',
@@ -439,7 +438,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  41 =>
+  41 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Ячейки для 25 000 игроков.
@@ -455,7 +454,7 @@
     'p' => 'qweqwe123',
     'u' => 'lmir1@mailinator.com',
   ),
-  42 =>
+  42 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Entradas para 25 000 jogadores.',
@@ -470,7 +469,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  43 =>
+  43 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => '25.000 oyuncu al?r',
@@ -485,7 +484,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  44 =>
+  44 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots voor 25.000 spelers.',
@@ -500,7 +499,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  45 =>
+  45 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espa?os para 25.000 jogadores.',
@@ -515,7 +514,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  46 =>
+  46 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots f?r 25,000 Spieler.',
@@ -529,9 +528,8 @@
     'y' => 32,
     'p' => 'qweqwe123',
     'u' => 'lwelt5@mailinator.com',
-    'skip' => true,
   ),
-  47 =>
+  47 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Emplacements pour 25 000 joueurs.',
@@ -546,7 +544,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  49 =>
+  49 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espacios para 25.000 jugadores.',
@@ -561,7 +559,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  52 =>
+  52 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Ячейки для 25 000 игроков.',
@@ -576,7 +574,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  55 =>
+  55 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espa?os para 25.000 jogadores.',
@@ -591,7 +589,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  56 =>
+  56 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -606,7 +604,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  57 =>
+  57 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -621,7 +619,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  58 =>
+  58 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots f?r 25,000 Spieler.',
@@ -637,7 +635,7 @@
     'u' => 'lwelt6@mailinator.com',
     'skip' => true,
   ),
-  59 =>
+  59 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.#',
@@ -652,7 +650,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  60 =>
+  60 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -667,7 +665,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  61 =>
+  61 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -682,7 +680,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  62 =>
+  62 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => NULL,
@@ -697,7 +695,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  64 =>
+  64 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots f?r 25,000 Spieler.',
@@ -712,7 +710,7 @@
     'p' => 'qweqwe123',
     'u' => 'limitium@gmail.com',
   ),
-  65 =>
+  65 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Emplacements pour 25 000 joueurs.',
@@ -727,7 +725,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  66 =>
+  66 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -742,7 +740,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  67 =>
+  67 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -757,7 +755,7 @@
     'u' => 'lworld29@mailinator.com',
     'p' => 'qweqwe123',
   ),
-  68 =>
+  68 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots f?r 25,000 Spieler.',
@@ -772,7 +770,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  35 =>
+  35 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -787,7 +785,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  69 =>
+  69 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espacios para 25.000 jugadores.',
@@ -802,7 +800,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  70 =>
+  70 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -817,7 +815,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  71 =>
+  71 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -832,7 +830,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  72 =>
+  72 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Emplacements pour 25 000 joueurs.',
@@ -847,7 +845,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  50 =>
+  50 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Miejsca dla 25 000 graczy.',
@@ -862,7 +860,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  73 =>
+  73 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => NULL,
@@ -877,7 +875,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  74 =>
+  74 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => NULL,
@@ -892,7 +890,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  75 =>
+  75 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => NULL,
@@ -907,7 +905,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  76 =>
+  76 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots f?r 25,000 Spieler.',
@@ -922,7 +920,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  77 =>
+  77 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -937,7 +935,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  78 =>
+  78 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espa?os para 25.000 jogadores.',
@@ -952,7 +950,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  79 =>
+  79 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players.',
@@ -967,7 +965,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  80 =>
+  80 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots f?r 25,000 Spieler.',
@@ -982,7 +980,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  81 =>
+  81 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -997,7 +995,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  82 =>
+  82 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espacios para 25.000 jugadores.',
@@ -1012,7 +1010,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  53 =>
+  53 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => '25.000 oyuncu al?r',
@@ -1027,7 +1025,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  83 =>
+  83 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Ячейки для 25 000 игроков.',
@@ -1042,7 +1040,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  84 =>
+  84 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Emplacements pour 25 000 joueurs. R?gle : Boost des Oubli?s',
@@ -1057,7 +1055,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  85 =>
+  85 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
@@ -1072,7 +1070,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  86 =>
+  86 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1087,7 +1085,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  87 =>
+  87 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1102,7 +1100,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  88 =>
+  88 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1117,7 +1115,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  54 =>
+  54 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots voor 25.000 spelers. Regelset: Vergeten bonus',
@@ -1132,7 +1130,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  99 =>
+  99 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espa?os para 25.000 jogadores. Conjunto de regras: melhoria dos Esquecidos\'',
@@ -1147,7 +1145,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  100 =>
+  100 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1162,7 +1160,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  101 =>
+  101 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
@@ -1177,7 +1175,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  102 =>
+  102 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Espacios para 25.000 jugadores.',
@@ -1192,7 +1190,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  103 =>
+  103 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Miejsca dla 25 000 graczy.',
@@ -1207,7 +1205,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  104 =>
+  104 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1222,7 +1220,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  51 =>
+  51 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Entradas para 25 000 jogadores.',
@@ -1237,7 +1235,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  105 =>
+  105 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots f?r 25,000 Spieler. Regelset: Vergessenen-Boost',
@@ -1252,7 +1250,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  106 =>
+  106 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1267,7 +1265,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  107 =>
+  107 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Ячейки для 25 000 игроков.',
@@ -1282,7 +1280,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  108 =>
+  108 => 
   array (
     'AcceptNewPlayer' => true,
     'Description' => 'Slots for 25,000 players. Rule set: Forgotten boost',
@@ -1297,7 +1295,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  109 =>
+  109 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 372798,
@@ -1313,7 +1311,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  110 =>
+  110 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 372798,
@@ -1329,7 +1327,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  121 =>
+  121 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 372567,
@@ -1345,7 +1343,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  122 =>
+  122 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 372798,
@@ -1361,7 +1359,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  123 =>
+  123 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1377,7 +1375,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  124 =>
+  124 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1393,7 +1391,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  125 =>
+  125 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1409,7 +1407,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  126 =>
+  126 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1425,7 +1423,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  127 =>
+  127 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1442,7 +1440,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  128 =>
+  128 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1459,7 +1457,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  129 =>
+  129 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1476,7 +1474,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  130 =>
+  130 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1493,7 +1491,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  131 =>
+  131 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 373715,
@@ -1510,7 +1508,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  132 =>
+  132 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 376345,
@@ -1527,7 +1525,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  48 =>
+  48 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1544,7 +1542,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  133 =>
+  133 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1561,7 +1559,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  134 =>
+  134 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1578,7 +1576,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  136 =>
+  136 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1595,7 +1593,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  137 =>
+  137 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1612,7 +1610,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  138 =>
+  138 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1629,7 +1627,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  139 =>
+  139 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 377320,
@@ -1646,7 +1644,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  111 =>
+  111 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1664,7 +1662,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  112 =>
+  112 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1682,7 +1680,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  113 =>
+  113 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1700,7 +1698,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  114 =>
+  114 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1718,7 +1716,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  115 =>
+  115 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1736,7 +1734,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  116 =>
+  116 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1754,7 +1752,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  117 =>
+  117 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1772,7 +1770,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  118 =>
+  118 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1790,7 +1788,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  119 =>
+  119 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1808,7 +1806,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  140 =>
+  140 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1826,7 +1824,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  141 =>
+  141 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1844,7 +1842,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  142 =>
+  142 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1862,7 +1860,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  143 =>
+  143 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1880,7 +1878,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  144 =>
+  144 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1898,7 +1896,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  145 =>
+  145 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1916,7 +1914,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  146 =>
+  146 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1934,7 +1932,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  147 =>
+  147 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1952,7 +1950,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  135 =>
+  135 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1970,7 +1968,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  148 =>
+  148 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -1988,7 +1986,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  149 =>
+  149 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -2006,7 +2004,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  150 =>
+  150 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -2024,7 +2022,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  151 =>
+  151 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -2042,7 +2040,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  153 =>
+  153 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 378171,
@@ -2060,7 +2058,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  152 =>
+  152 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 383327,
@@ -2078,7 +2076,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  154 =>
+  154 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 383327,
@@ -2096,7 +2094,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  155 =>
+  155 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 383327,
@@ -2114,7 +2112,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  156 =>
+  156 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 383327,
@@ -2132,7 +2130,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  157 =>
+  157 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 383327,
@@ -2150,7 +2148,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  159 =>
+  159 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2168,7 +2166,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  160 =>
+  160 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2186,7 +2184,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  162 =>
+  162 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2204,7 +2202,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  163 =>
+  163 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2222,7 +2220,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  158 =>
+  158 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2240,7 +2238,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  161 =>
+  161 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2258,7 +2256,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  164 =>
+  164 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2276,7 +2274,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  165 =>
+  165 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2293,7 +2291,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  166 =>
+  166 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2310,7 +2308,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  167 =>
+  167 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2327,7 +2325,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  168 =>
+  168 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2344,7 +2342,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  169 =>
+  169 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2361,7 +2359,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  170 =>
+  170 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2378,7 +2376,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  171 =>
+  171 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2395,7 +2393,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  172 =>
+  172 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2412,7 +2410,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  173 =>
+  173 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2429,7 +2427,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  174 =>
+  174 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2446,7 +2444,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  175 =>
+  175 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 384441,
@@ -2463,7 +2461,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  176 =>
+  176 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 391606,
@@ -2481,7 +2479,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  177 =>
+  177 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 391606,
@@ -2499,7 +2497,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  178 =>
+  178 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 391606,
@@ -2517,7 +2515,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  179 =>
+  179 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 391606,
@@ -2535,7 +2533,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  180 =>
+  180 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 391606,
@@ -2553,7 +2551,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  182 =>
+  182 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2571,7 +2569,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  183 =>
+  183 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2589,7 +2587,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  184 =>
+  184 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2607,7 +2605,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  185 =>
+  185 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2625,7 +2623,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  186 =>
+  186 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2643,7 +2641,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  187 =>
+  187 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2661,7 +2659,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  188 =>
+  188 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2679,7 +2677,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  189 =>
+  189 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2697,7 +2695,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  190 =>
+  190 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2715,7 +2713,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  192 =>
+  192 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 394048,
@@ -2733,7 +2731,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  120 =>
+  120 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 396907,
@@ -2751,7 +2749,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  191 =>
+  191 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 396907,
@@ -2769,7 +2767,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  193 =>
+  193 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 396907,
@@ -2787,7 +2785,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  194 =>
+  194 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 396907,
@@ -2805,7 +2803,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  195 =>
+  195 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 396907,
@@ -2823,7 +2821,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  196 =>
+  196 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2841,7 +2839,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  197 =>
+  197 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2859,7 +2857,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  198 =>
+  198 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2877,7 +2875,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  199 =>
+  199 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2895,7 +2893,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  200 =>
+  200 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2913,7 +2911,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  201 =>
+  201 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2931,7 +2929,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  202 =>
+  202 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2949,7 +2947,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  203 =>
+  203 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2967,7 +2965,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  204 =>
+  204 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -2985,7 +2983,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  205 =>
+  205 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -3003,7 +3001,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  206 =>
+  206 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -3021,7 +3019,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  207 =>
+  207 => 
   array (
     'AcceptNewPlayer' => true,
     'Changelist' => 401440,
@@ -3039,7 +3037,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  220 =>
+  220 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3058,7 +3056,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  222 =>
+  222 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3077,7 +3075,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  223 =>
+  223 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3096,7 +3094,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  224 =>
+  224 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3115,7 +3113,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  225 =>
+  225 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3134,7 +3132,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  226 =>
+  226 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3153,7 +3151,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  227 =>
+  227 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3172,7 +3170,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  228 =>
+  228 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3191,7 +3189,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  229 =>
+  229 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3211,7 +3209,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  230 =>
+  230 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3231,7 +3229,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  231 =>
+  231 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3250,7 +3248,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  232 =>
+  232 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3269,7 +3267,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  233 =>
+  233 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3288,7 +3286,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  234 =>
+  234 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3307,7 +3305,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  235 =>
+  235 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3327,7 +3325,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  236 =>
+  236 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3347,7 +3345,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  237 =>
+  237 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3367,7 +3365,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  238 =>
+  238 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3386,7 +3384,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  239 =>
+  239 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3406,7 +3404,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  240 =>
+  240 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3426,7 +3424,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  241 =>
+  241 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3445,7 +3443,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  242 =>
+  242 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3464,7 +3462,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  244 =>
+  244 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3484,7 +3482,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  245 =>
+  245 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3504,7 +3502,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  246 =>
+  246 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3524,7 +3522,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  247 =>
+  247 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3544,7 +3542,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  248 =>
+  248 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3564,7 +3562,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  253 =>
+  253 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3583,7 +3581,7 @@
     'u' => 'juergen.albert@web.de',
     'p' => 'Renndackel1967',
   ),
-  250 =>
+  250 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3602,7 +3600,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  251 =>
+  251 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3621,7 +3619,7 @@
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
-  252 =>
+  252 => 
   array (
     'AcceptNewPlayer' => true,
     'Account' => 0,
@@ -3637,6 +3635,26 @@
     'Url' => 'http://prodgame14.alliances.commandandconquer.com/252',
     'x' => 32,
     'y' => 32,
+    'u' => 'limitium@gmail.com',
+    'p' => 'qweqwe123',
+  ),
+  249 => 
+  array (
+    'AcceptNewPlayer' => true,
+    'Account' => 0,
+    'Changelist' => 410325,
+    'Description' => 'Slots für 30,000 Spieler. Regelset: Vergessenen-Boost. Neue Wirtschafts-Balance',
+    'ExtendedLanguage' => 'de_DE',
+    'Id' => 249,
+    'MaxPlayers' => 30000,
+    'Name' => 'Welt 34                         ',
+    'Recommended' => true,
+    'StartTime' => 1.38925800047E+12,
+    'Timezone' => 1,
+    'Url' => 'http://prodgame16.alliances.commandandconquer.com/249',
+    'version' => 2,
+    'x' => 35,
+    'y' => 35,
     'u' => 'limitium@gmail.com',
     'p' => 'qweqwe123',
   ),
