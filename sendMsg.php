@@ -29,7 +29,7 @@ Everyone welcome!
 ";
 
     $post = "
-    Added Monde 13, Мир 18, Mundo 10 Brazil.
+    Added Mundo 16 (España), World 85 (Europe), Wereld 5, Świat 10.
 
  ";
 
