@@ -123,10 +123,10 @@ class CCApi
         print_r("Open ingame session ");
         $this->setSession($this->worldSession);
         $data = $this->getData("OpenSession", array(
-            "refId" => CCApi::getTime(),
+            "platformId" => 1,
+            "refId" => -1,
             "reset" => "true",
-            "version" => "-1",
-            "platformId" => 1
+            "version" => -1
         ));
         $gameSession = $data->i;
         if (!$gameSession || "00000000-0000-0000-0000-000000000000" == $gameSession) {
