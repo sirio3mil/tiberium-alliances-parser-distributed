@@ -6,6 +6,7 @@ require_once "lib/0MQ/0MQ/Log.php";
 
 class Generator
 {
+    const MAX_FAILS_PER_LOGIN = 20;
     private $servers;
     private $keys = array();
     private $sessions = array();
@@ -38,6 +39,7 @@ class Generator
         if (!isset($this->sessions[$username])) {
             $this->sessions[$username] = array(
                 "auth" => new CCAuth($username, $password),
+                "fails" => 0,
                 "forceReload" => true
             );
         }
@@ -58,7 +60,10 @@ class Generator
     {
         $username = $this->servers[$serverId]["u"];
         if (isset($this->sessions[$username])) {
-            $this->sessions[$username]["forceReload"] = true;
+            $this->sessions[$username]["fails"]++;
+            if($this->sessions[$username]["fails"] > self::MAX_FAILS_PER_LOGIN){
+                $this->sessions[$username]["forceReload"] = true;
+            }
         }
     }
 }

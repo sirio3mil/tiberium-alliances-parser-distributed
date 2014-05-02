@@ -128,6 +128,12 @@ class CCApi
             "reset" => "true",
             "version" => -1
         ));
+        $data = $this->getData("OpenSession", array(
+            "platformId" => 1,
+            "refId" => -1,
+            "reset" => "true",
+            "version" => -1
+        ));
         $gameSession = $data->i;
         if (!$gameSession || "00000000-0000-0000-0000-000000000000" == $gameSession) {
             print_r("failed\r\n");
