@@ -29,7 +29,7 @@ Everyone welcome!
 ";
 
     $post = "
-    Added Mundo 16 (España), World 85 (Europe), Wereld 5, Świat 10.
+    Added Mundo 17 (España), World 94 (USA West Coast), World 95 (Europe), World 96 (USA West Coast), Lume 2, Svet 2, Mundo 5 (Portuguessa).
 
  ";
 

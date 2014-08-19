@@ -18,6 +18,7 @@ $ventilator->setGenerator(function () use($generator)
 {
     $server = $generator->nextServer();
     if (!$server) {
+        sleep(60*30);
         return false;
     }
     unset($server["AcceptNewPlayer"]);
