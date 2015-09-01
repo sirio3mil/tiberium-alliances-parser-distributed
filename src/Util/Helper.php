@@ -12,8 +12,8 @@ class Helper
 
         $clientServers = [];
         foreach ($servers as $k => $server) {
-            if (!in_array($k, array('limitium', 'util'))) {
-                $clientServers[] = array('id' => $server['Id'], 'name' => $server['Name']);
+            if (!in_array($k, ['limitium', 'util'])) {
+                $clientServers[] = ['id' => $server['Id'], 'name' => $server['Name']];
             }
         }
 
@@ -21,8 +21,19 @@ class Helper
             return (strtolower($a['name']) > strtolower($b['name'])) ? 1 : -1;
         });
 
-//        post to front
-//        file_put_contents("c:\\WebServers\\home\\ta-f\\www\\models\\servers.php", "<?php return " . var_export(array_values($clientServers), 1) . ";");
+        $curler = Curler::create()
+            ->setUrl("http://map.tiberium-alliances.com/savedata")
+            ->setPostData(Curler::encodePost(
+                [
+                    'key' => "wohdfo97wg4iurvfdc t7yaigvrufbs",
+                    'servers' => serialize(array_values($clientServers))
+                ]
+            ))
+            ->withHeaders(false);
+        $curler->post();
+        $curler->close();
+        print_r("Updated servers\r\n");
+
     }
 
     /**

@@ -12,6 +12,7 @@ use limitium\zmq\ZLogger;
 
 $wrk = new Worker("tcp://localhost:5555", 5000, 10000, null, false);
 $log = new ZLogger("wparser", "tcp://localhost:5558");
+$log->id = md5(microtime());
 $wrk->setExecutor(function ($data) use ($log) {
 
     Timer::set("start");
@@ -105,9 +106,9 @@ $wrk->setExecutor(function ($data) use ($log) {
 
             $totalTime = Timer::get("start");
             print_r("Total time world " . $server["Id"] . ": " . $totalTime . "\r\n\r\n");
-            $log->info($totalTime);
+            $log->info($totalTime, ['id' => $log->id]);
         } else {
-            $log->warning("parse_fail");
+            $log->warning("parse_fail", ['id' => $log->id]);
         }
 
     } else {

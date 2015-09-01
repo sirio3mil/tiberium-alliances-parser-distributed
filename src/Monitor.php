@@ -158,6 +158,7 @@ $c = new Concentrator("tcp://*:5558");
 $c->setReceiver(function ($data) use ($monitor) {
     if ($data && $data[0] != 'auth' && $data[1] != 'auth') {
         $monitor->addEvent([
+                "id" => isset($data[5]) ? json_decode($data[5])->id : 1,
                 "type" => $data[0],
                 "ts" => $data[1],
                 "level" => $data[2],

@@ -25,7 +25,7 @@ class Curler
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, false);
 
-        curl_setopt($this->ch, CURLOPT_TIMEOUT, 10);
+        curl_setopt($this->ch, CURLOPT_TIMEOUT, 40);
 
         return $this;
     }
@@ -71,6 +71,11 @@ class Curler
     {
         curl_setopt($this->ch, CURLOPT_HEADER, $with);
         return $this;
+    }
+
+    public function error()
+    {
+        return curl_error($this->ch);
     }
 
     public function close()

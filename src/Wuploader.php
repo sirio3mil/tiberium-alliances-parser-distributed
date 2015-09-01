@@ -10,7 +10,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $wrk = new Worker("tcp://localhost:5557", 2500, 10000, null, false);
 $log = new ZLogger("wuploader", "tcp://localhost:5558");
-
+$log->id = md5(microtime());
 $wrk->setExecutor(function ($data) use ($log) {
     $id = intval(substr($data, 0, 3));
     $zip = substr($data, 3);
@@ -26,15 +26,16 @@ $wrk->setExecutor(function ($data) use ($log) {
         )
         ->withHeaders(false);
     $resp = $curler->post();
+    $error = $curler->error();
     $curler->close();
     $uploadTime = Timer::get("upload");
 
-    print_r("Uploading $id... $resp: " . $uploadTime . "\r\n\r\n");
+    print_r("Uploading $id... $resp|$error: " . $uploadTime . "\r\n\r\n");
 
     if ($resp == "ok") {
-        $log->info($uploadTime);
+        $log->info($uploadTime, ['id' => $log->id]);
     } else {
-        $log->warning("fail");
+        $log->warning("fail", ['id' => $log->id]);
     }
     return $resp;
 });

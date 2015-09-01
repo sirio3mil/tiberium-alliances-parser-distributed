@@ -5,9 +5,6 @@ error_reporting(E_ALL);
 require __DIR__ . '/vendor/autoload.php';
 
 
-new \limitium\zmq\Publisher("");
-
-die;
 use limitium\TAPD\CCAuth\CCAuth;
 use limitium\TAPD\Register;
 use limitium\TAPD\Util\Helper;
