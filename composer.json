@@ -1,0 +1,17 @@
+{
+    "name": "limitium/tiberium-alliances-parser-distributed",
+    "authors": [
+        {
+            "name": "limitium",
+            "email": "limitium@gmail.com"
+        }
+    ],
+    "require": {
+        "limitium/zmq": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "limitium\\TAPD\\": "src"
+        }
+    }
+}

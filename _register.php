@@ -1,33 +1,22 @@
 <?php
+
 error_reporting(E_ALL);
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Curler.php";
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Timer.php";
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "Util" . DIRECTORY_SEPARATOR . "Helper.php";
+require __DIR__ . '/vendor/autoload.php';
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCAuth" . DIRECTORY_SEPARATOR . "CCAuth.php";
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "CCApi" . DIRECTORY_SEPARATOR . "CCApi.php";
+use limitium\TAPD\CCAuth\CCAuth;
+use limitium\TAPD\Register;
+use limitium\TAPD\Util\Helper;
 
-$servers = require dirname(__FILE__) . DIRECTORY_SEPARATOR . "servers.php";
+$servers = require Helper::pathToServers();
 
+$authorizator = new CCAuth("limitium@gmail.com", "qweqwe123");
+$ses = $authorizator->getSession();
+
+$r = new Register();
 $k = $argv[1];
 if (is_numeric($k)) {
-    if ($servers[$k]['AcceptNewPlayer']) {
-        if ($servers[$k]['u'] != 'limitium@gmail.com') {
-
-            $authorizator = new CCAuth("limitium@gmail.com", "qweqwe123");
-            $ses = $authorizator->getSession();
-
-            $api = new CCApi($servers[$k]["Url"], $ses);
-            if ($api->openSession()) {
-                $api->register("limitium");
-                $servers[$k]["u"]="limitium@gmail.com";
-            }
-        } else {
-            print_r("Registered already\r\n");
-        }
-    } else {
-        print_r("No space\r\n");
+    if ($r->registerNewServer($servers[$k], $ses)) {
+        Helper::saveServers($servers);
     }
 }
-saveServers($servers);

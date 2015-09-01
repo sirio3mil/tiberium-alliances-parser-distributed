@@ -1,24 +1,22 @@
 <?php
 error_reporting(E_ALL);
+require __DIR__ . '/../vendor/autoload.php';
 
-require_once "lib/0MQ/0MQ/Ventilator.php";
-require_once "lib/0MQ/0MQ/Publisher.php";
-require_once "Generator.php";
+use limitium\zmq\Publisher;
+use limitium\zmq\Ventilator;
+use limitium\TAPD\Generator;
 
-$context = new ZMQContext();
 
-$publisher = new Publisher(false, $context);
-$publisher->bind("tcp://*:5556");
+$context = new \ZMQContext();
 
-$ventilator = new Ventilator(false, 5000, $context);
-$ventilator->bind("tcp://*:5555");
+$publisher = new Publisher("tcp://*:5556", $context, false);
+
+$ventilator = new Ventilator("tcp://*:5555", 5000, $context, false);
 $generator = new Generator();
 
-$ventilator->setGenerator(function () use($generator)
-{
+$ventilator->setGenerator(function () use ($generator) {
     $server = $generator->nextServer();
     if (!$server) {
-        sleep(60*30);
         return false;
     }
     unset($server["AcceptNewPlayer"]);
@@ -32,8 +30,7 @@ $ventilator->setGenerator(function () use($generator)
     return json_encode($server);
 });
 
-$ventilator->setResponder(function ($data) use($generator, $publisher)
-{
+$ventilator->setResponder(function ($data) use ($generator, $publisher) {
     $id = intval(substr($data, 0, 3));
     $status = intval(substr($data, 3, 2));
     $data = substr($data, 5);
