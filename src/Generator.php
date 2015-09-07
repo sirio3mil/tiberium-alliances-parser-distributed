@@ -9,7 +9,7 @@ use limitium\zmq\ZLogger;
 
 class Generator
 {
-    const MAX_FAILS_PER_LOGIN = 0;
+    const MAX_FAILS_PER_LOGIN = 5;
     private $servers;
     private $keys = [];
     private $sessions = [];
