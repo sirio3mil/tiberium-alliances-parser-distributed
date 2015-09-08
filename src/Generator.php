@@ -27,6 +27,7 @@ class Generator
     {
         if (sizeof($this->keys) == 0) {
             $this->keys = array_keys($this->servers);
+            $this->checkNewServers();
         }
         while (!is_numeric($id = array_shift($this->keys)) || isset($this->servers[$id]['skip'])) {
         }

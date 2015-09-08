@@ -49,7 +49,6 @@ class Register
                 }
             }
             Helper::saveServers($servers);
-            //todo:send to server
         } else {
             print_r("Empty response servers\r\n");
         }
