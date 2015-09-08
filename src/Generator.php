@@ -80,7 +80,7 @@ class Generator
 
     public function checkNewServers()
     {
-        if ($this->lastServersCheck > microtime(1) + 60 * 60 * 12) {
+        if ($this->lastServersCheck + 60 * 60 * 12 < microtime(1)) {
             $this->lastServersCheck = microtime(1);
             $ses = $this->getSession("limitium@gmail.com", "qweqwe123");
             $this->register->checkServers($this->servers, $ses);
