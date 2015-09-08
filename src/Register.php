@@ -62,6 +62,7 @@ class Register
                 if ($api->openSession() && $api->register("limitium")) {
                     $server["u"] = "limitium@gmail.com";
                     print_r("Registered successful\r\n");
+                    sleep(5);
                     return true;
                 } else {
                     print_r("Register fail...sleeping\r\n");
