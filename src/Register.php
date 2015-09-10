@@ -54,6 +54,11 @@ class Register
         }
     }
 
+    /**
+     * @param $server
+     * @param $ses
+     * @return bool
+     */
     public function registerNewServer(&$server, $ses)
     {
         if ($server['AcceptNewPlayer']) {
@@ -63,10 +68,11 @@ class Register
                     $server["u"] = "limitium@gmail.com";
                     print_r("Registered successful\r\n");
                     sleep(5);
+                    $this->postMessageOnForum($api, $server);
                     return true;
                 } else {
                     print_r("Register fail...sleeping\r\n");
-                    sleep(60*60);
+                    sleep(60 * 60);
                 }
             } else {
                 print_r("Registered already\r\n");
@@ -76,6 +82,48 @@ class Register
             print_r("No space\r\n");
         }
         return false;
+    }
+
+    public function postMessageOnForum(CCApi $api, $server)
+    {
+        $title = "World minimap!!!";
+        $msg = "World minimap!
+Everyone welcome!
+[url]http://map.tiberium-alliances.com/[/url]
+
+
+";
+
+        $post = "
+
+ ";
+        $time = CCApi::getTime();
+        $data = $api->poll(array(
+            "requests" => "WC:A\fCTIME:$time\fCHAT:\fWORLD:\fGIFT:\fACS:0\fASS:0\fCAT:0\f"
+        ));
+        foreach ($data as $part) {
+            if ($part->t == "FORUM") {
+                $forumId = $part->d->f[0]->i;
+                break;
+            }
+        }
+//        if (!$forumId) {
+//            file_put_contents(dirname(__FILE__) . DIRECTORY_SEPARATOR . "spam" . DIRECTORY_SEPARATOR . "errorForum" . $server["Id"], json_encode($data));
+//            print_r("No forumId found");
+//        }
+//        $fileName = dirname(__FILE__) . DIRECTORY_SEPARATOR . "spam" . DIRECTORY_SEPARATOR . $server["Id"];
+//        if (!is_file($fileName) || !($threadId = file_get_contents($fileName))) {
+
+        $id = $api->createThread($title, $msg . $post, $forumId);
+
+//            file_put_contents($fileName, $id);
+//        } else {
+//            $api->addPost($post, $forumId, $threadId);
+//            file_put_contents(dirname(__FILE__) . DIRECTORY_SEPARATOR . "spam" . DIRECTORY_SEPARATOR . "p" . $server["Id"], 1);
+//        }
+        $api->close();
+
+        print_r("Forum spammed");
     }
 
 }

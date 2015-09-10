@@ -29,7 +29,6 @@ Everyone welcome!
 ";
 
     $post = "
-    Added Mundo 17 (España), World 94 (USA West Coast), World 95 (Europe), World 96 (USA West Coast), Lume 2, Svet 2, Mundo 5 (Portuguessa).
 
  ";
 
@@ -44,7 +43,7 @@ Everyone welcome!
         }
     }
     if (!$forumId) {
-        file_put_contents("c:/WebServers/home/cc/www/parser/spam/errorForum" . $server["Id"], json_encode($data));
+        file_put_contents(dirname(__FILE__) . DIRECTORY_SEPARATOR . "spam" . DIRECTORY_SEPARATOR . "errorForum" . $server["Id"], json_encode($data));
         print_r("No forumId found");
     }
     $fileName = dirname(__FILE__) . DIRECTORY_SEPARATOR . "spam" . DIRECTORY_SEPARATOR . $server["Id"];
