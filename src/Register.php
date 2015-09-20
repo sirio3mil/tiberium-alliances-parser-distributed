@@ -29,7 +29,7 @@ class Register
                             $size = 13;
                         }
                         if ($server->MaxPlayers == 7500) {
-                            $size = 20;
+                            $size = 19;
                         }
                     }
                     $server->x = $size;
