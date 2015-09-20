@@ -25,6 +25,12 @@ class Register
                         if ($server->MaxPlayers == 50000) {
                             $size = 50;
                         }
+                        if ($server->MaxPlayers == 5000) {
+                            $size = 13;
+                        }
+                        if ($server->MaxPlayers == 7500) {
+                            $size = 20;
+                        }
                     }
                     $server->x = $size;
                     $server->y = $size;
