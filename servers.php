@@ -4960,8 +4960,8 @@
     'Url' => 'http://prodgame05.alliances.commandandconquer.com/320',
     'x' => 32,
     'y' => 32,
-    'u' => 'limitium@gmail.com',
-    'p' => 'qweqwe123',
+    'u' => 'juergen.albert@web.de',
+    'p' => 'Renndackel1967',
   ),
   322 => 
   array (
@@ -5055,8 +5055,8 @@
     'Url' => 'http://prodgame02.alliances.commandandconquer.com/325',
     'x' => 32,
     'y' => 32,
-    'u' => 'limitium@gmail.com',
-    'p' => 'qweqwe123',
+    'u' => 'juergen.albert@web.de',
+    'p' => 'Renndackel1967',
   ),
   326 => 
   array (
