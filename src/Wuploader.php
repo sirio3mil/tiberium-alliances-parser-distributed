@@ -19,7 +19,7 @@ $wrk->setExecutor(function ($data) use ($log) {
         ->setUrl("http://data.tiberium-alliances.com/savedata")
         ->setPostData(Curler::encodePost(
             array(
-                'key' => "wohdfo97wg4iurvfdc t7yaigvrufbs",
+                'key' => "qwe",
                 'world' => $id,
                 'data' => $zip)
         )
