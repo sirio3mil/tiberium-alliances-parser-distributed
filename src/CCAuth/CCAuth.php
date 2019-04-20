@@ -49,6 +49,13 @@ class CCAuth
         return $this->basePath;
     }
 
+    public static function getDecodedResponse(string $res): string
+    {
+        $strrpos = strrpos($res, PHP_EOL, -1);
+        $length = $strrpos + strlen(PHP_EOL);
+        return gzdecode(substr($res, $length));
+    }
+
     private function reloadSession(): void
     {
         $this->session = null;
@@ -147,9 +154,10 @@ class CCAuth
             ))
             ->get();
         $this->debug($res);
-        preg_match('<input type="hidden" name="sessionId" value="(.*)?" \/>', $res, $session);
+        $decoded = CCAuth::getDecodedResponse($res);
+        preg_match('<input type="hidden" name="sessionId" value="(.*)?" \/>', $decoded, $session);
         if (isset($session[1])) {
-//            preg_match("/ action=\"(.*?)\/index.aspx\" /", $res, $url);
+//            preg_match("/ action=\"(.*?)\/index.aspx\" /", $decoded, $url);
             $this->session = $session[1];
         }
     }
