@@ -1,9 +1,13 @@
 {
-    "name": "limitium/tiberium-alliances-parser-distributed",
+    "name": "sirio3mil/tiberium-alliances-parser-distributed",
     "authors": [
         {
             "name": "limitium",
             "email": "limitium@gmail.com"
+        },
+        {
+            "name": "reynier.delarosa",
+            "email": "sirio3mil@gmail.com"
         }
     ],
     "require": {
