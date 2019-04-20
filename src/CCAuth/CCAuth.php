@@ -6,23 +6,50 @@ use limitium\TAPD\Util\Curler;
 
 class CCAuth
 {
+    /** @var Curler */
     private $curler;
+    /** @var string */
     private $username;
+    /** @var string */
     private $password;
+    /** @var bool */
     private $verbose;
+
     private $session;
+    /** @var string */
+    protected $basePath;
+    /** @var string */
+    protected $cookieFileName;
 
     public function __construct($username, $password, $verbose = false)
     {
         $this->username = $username;
         $this->password = $password;
         $this->verbose = $verbose;
-        $this->curler = Curler::create()
-            ->setCookieFile(dirname(__FILE__) . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "cookies" . DIRECTORY_SEPARATOR . "cookies_auth.txt");
-
+        $this->cookieFileName = md5($username);
+        $this->curler = Curler::create();
     }
 
-    private function reloadSession()
+    /**
+     * @param string $basePath
+     * @return CCAuth
+     */
+    public function setBasePath(string $basePath): CCAuth
+    {
+        $this->basePath = $basePath;
+        $this->curler->setCookieFile($this->basePath . DIRECTORY_SEPARATOR . $this->cookieFileName);
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBasePath()
+    {
+        return $this->basePath;
+    }
+
+    private function reloadSession(): void
     {
         $this->session = null;
 
@@ -35,111 +62,103 @@ class CCAuth
         $this->launch();
     }
 
+    /**
+     * @param string|null $res
+     */
+    protected function debug(?string $res): void
+    {
+        if ($this->verbose) {
+            $trace = debug_backtrace();
+            $caller = $trace[1];
+            file_put_contents($this->basePath . DIRECTORY_SEPARATOR . $caller['function'], $res);
+            print_r($caller['function'] . PHP_EOL);
+        }
+    }
 
-    private function initCookie()
+    private function initCookie(): void
     {
         $res = $this->curler
             ->setUrl("https://www.tiberiumalliances.com/home")
             ->setHeaders(array(
-            "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0",
-            "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language: en-us,en;q=0.5",
-            "Accept-Encoding: gzip, deflate",
-            "Cache-Control: no-cache",
-            "Connection: keep-alive"
-        ))
+                "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0",
+                "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language: en-us,en;q=0.5",
+                "Accept-Encoding: gzip, deflate",
+                "Cache-Control: no-cache",
+                "Connection: keep-alive"
+            ))
             ->get();
-
-        if ($this->verbose) {
-            file_put_contents("c:\\init.html", $res);
-        }
-        print_r("Cookie inited\r\n");
+        $this->debug($res);
     }
 
-    private function getLoginPage()
+    private function getLoginPage(): void
     {
         $res = $this->curler
             ->setUrl("https://www.tiberiumalliances.com/login/auth")
             ->setHeaders(array(
-            "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0",
-            "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language: en-us,en;q=0.5",
-            "Accept-Encoding: gzip, deflate",
-            "Referer: http://tiberiumalliances.com/intro/index",
-            "Cache-Control: no-cache",
-            "Connection: keep-alive"
-        ))
+                "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0",
+                "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language: en-us,en;q=0.5",
+                "Accept-Encoding: gzip, deflate",
+                "Referer: http://tiberiumalliances.com/intro/index",
+                "Cache-Control: no-cache",
+                "Connection: keep-alive"
+            ))
             ->get();
-        if ($this->verbose) {
-            file_put_contents("c:\\logpage.html", $res);
-        }
-        print_r("Login page retrieved\r\n");
+        $this->debug($res);
     }
 
-    /**
-     * @param $this->ch
-     * @return String $worldSession
-     * @throws Exception
-     */
-    private function postLoginData()
+    private function postLoginData(): void
     {
-
-        print_r("Login " . $this->username . ":" . $this->password . "\r\n");
-
         $res = $this->curler
             ->setUrl("https://www.tiberiumalliances.com/j_security_check")
             ->setHeaders(array("Host: www.tiberiumalliances.com",
-            "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0",
-            "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language: en-us,en;q=0.5",
-            "Accept-Encoding: gzip, deflate",
-            "DNT 1",
-            "Referer: https://www.tiberiumalliances.com/login/auth",
-            "Connection: keep-alive",
-        ))
+                "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0",
+                "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language: en-us,en;q=0.5",
+                "Accept-Encoding: gzip, deflate",
+                "DNT 1",
+                "Referer: https://www.tiberiumalliances.com/login/auth",
+                "Connection: keep-alive",
+            ))
             ->setPostData(Curler::encodePost(array(
-            '_web_remember_me' => '',
-            'spring-security-redirect' => '',
-            'timezone' => 4,
-            'id' => '',
-            'j_username' => $this->username,
-            'j_password' => $this->password
-        )))
+                '_web_remember_me' => '',
+                'spring-security-redirect' => '',
+                'timezone' => 4,
+                'id' => '',
+                'j_username' => $this->username,
+                'j_password' => $this->password
+            )))
             ->post();
-        if ($this->verbose) {
-            file_put_contents("c:\\login_post.html", $res);
-        }
+        $this->debug($res);
     }
 
-
-    private function launch()
+    private function launch(): void
     {
-        print_r("Launching game \r\n");
         $res = $this->curler
             ->setUrl("https://www.tiberiumalliances.com/game/launch")
             ->setHeaders(array("Host: www.tiberiumalliances.com",
-            "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0",
-            "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language: en-us,en;q=0.5",
-            "Accept-Encoding: gzip, deflate",
-            "Referer: https://tiberiumalliances.com/home",
-            "Connection: keep-alive",
-        ))
+                "User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:11.0) Gecko/20100101 Firefox/11.0",
+                "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language: en-us,en;q=0.5",
+                "Accept-Encoding: gzip, deflate",
+                "Referer: https://tiberiumalliances.com/home",
+                "Connection: keep-alive",
+            ))
             ->get();
-        if ($this->verbose) {
-            file_put_contents("c:\\launch.html", $res);
-        }
+        $this->debug($res);
         preg_match('<input type="hidden" name="sessionId" value="(.*)?" \/>', $res, $session);
-
         if (isset($session[1])) {
-            print_r("World session: {$session[1]}\r\n");
-
-            preg_match("/ action=\"(.*?)\/index.aspx\" /", $res, $url);
+//            preg_match("/ action=\"(.*?)\/index.aspx\" /", $res, $url);
             $this->session = $session[1];
         }
     }
 
-    public function getSession($reload = false)
+    /**
+     * @param bool $reload
+     * @return string|null
+     */
+    public function getSession($reload = false): ?string
     {
         if (!$this->session || $reload) {
             $this->reloadSession();
